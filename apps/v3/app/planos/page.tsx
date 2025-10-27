@@ -2,18 +2,29 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Check, Crown, Star, Sparkles, MessageCircle, Phone, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
-import { Badge } from '@teleobra24h/ui/components/badge';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@teleobra24h/ui/components/accordion';
+import { motion } from 'framer-motion';
+import {
+  ArrowLeft,
+  Check,
+  Sparkles,
+  Zap,
+  Award,
+  Crown,
+  Shield,
+  TrendingUp,
+  ChevronRight
+} from 'lucide-react';
 
 const plans = [
   {
     id: 'bronze',
     name: 'Bronze',
     description: 'Ideal para profissionais iniciantes',
-    price: 49,
+    monthlyPrice: 49,
     yearlyPrice: 490,
     featured: false,
+    icon: Shield,
+    gradient: 'from-primary-600 to-primary-700',
     features: [
       'Perfil básico na plataforma',
       'Até 10 solicitações/mês',
@@ -27,9 +38,11 @@ const plans = [
     id: 'prata',
     name: 'Prata',
     description: 'Para profissionais estabelecidos',
-    price: 99,
+    monthlyPrice: 99,
     yearlyPrice: 990,
     featured: false,
+    icon: TrendingUp,
+    gradient: 'from-secondary-500 to-secondary-700',
     features: [
       'Tudo do Bronze, mais:',
       'Solicitações ilimitadas',
@@ -45,9 +58,11 @@ const plans = [
     id: 'ouro',
     name: 'Ouro',
     description: 'Máxima visibilidade e recursos premium',
-    price: 199,
+    monthlyPrice: 199,
     yearlyPrice: 1990,
     featured: true,
+    icon: Crown,
+    gradient: 'from-accent-500 to-accent-700',
     features: [
       'Tudo do Prata, mais:',
       'Posição TOP nas buscas',
@@ -79,375 +94,342 @@ const faqs = [
     answer: 'Suporte VIP inclui atendimento prioritário 24/7 via WhatsApp, telefone e email, com tempo de resposta garantido de até 1 hora.',
   },
   {
-    question: 'Como funciona o desconto anual?',
-    answer: 'Ao optar pelo pagamento anual, você economiza 2 meses. O valor é cobrado uma vez por ano com desconto automático aplicado.',
-  },
-  {
     question: 'Posso cancelar a qualquer momento?',
-    answer: 'Sim, não há fidelidade. Você pode cancelar quando quiser e seu plano permanece ativo até o fim do período pago.',
+    answer: 'Sim, sem taxas ou multas. O cancelamento é processado imediatamente e você mantém acesso até o fim do período pago.',
   },
   {
-    question: 'O que é o Serviço de Concierge?',
-    answer: 'É um serviço premium exclusivo para membros Ouro, oferecendo atendimento personalizado, agendamento prioritário e suporte dedicado para projetos complexos.',
+    question: 'Quais formas de pagamento são aceitas?',
+    answer: 'Aceitamos cartão de crédito, boleto, PIX e transferência bancária. Planos anuais têm 16% de desconto.',
   },
 ];
 
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 }
+};
+
+const staggerChildren = {
+  animate: {
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+};
+
 export default function PlanosPage() {
-  const [billingPeriod, setBillingPeriod] = useState<'monthly' | 'yearly'>('monthly');
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
-        <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <ArrowLeft className="w-5 h-5" />
-            <span className="font-heading text-2xl font-bold tracking-tight">
-              TeleObra<span className="text-gold">24h</span>
-            </span>
-          </Link>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-primary-100 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-3">
+              <ArrowLeft className="w-5 h-5 text-primary-600" />
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-gradient-secondary rounded-lg flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-heading text-xl font-bold bg-gradient-to-r from-primary-900 to-secondary-600 bg-clip-text text-transparent">
+                  TeleObra24h
+                </span>
+              </div>
+            </Link>
 
-          <div className="flex items-center gap-6">
-            <Link href="/busca" className="text-sm hover:text-gold transition-colors">
-              Buscar
-            </Link>
-            <Link href="/sobre" className="text-sm hover:text-gold transition-colors">
-              Sobre
-            </Link>
+            <div className="hidden md:flex items-center gap-8">
+              <Link href="/busca" className="text-sm font-medium text-primary-700 hover:text-secondary-600 transition-colors">
+                Buscar
+              </Link>
+              <Link href="/sobre" className="text-sm font-medium text-primary-700 hover:text-secondary-600 transition-colors">
+                Sobre
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-48 pb-20 px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="font-heading text-7xl md:text-8xl font-bold mb-8 leading-tight">
-            Planos <span className="text-gold">Premium</span>
-          </h1>
-          <p className="text-2xl text-black/60 font-light leading-relaxed">
-            Escolha o plano ideal para expandir seu negócio e conectar-se com clientes de alto padrão
-          </p>
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-secondary-200 rounded-full blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-200 rounded-full blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <motion.div className="text-center" {...fadeIn}>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-secondary-200 mb-8 shadow-lg"
+            >
+              <Award className="w-4 h-4 text-secondary-600" />
+              <span className="text-sm font-medium text-primary-900">Planos Premium</span>
+            </motion.div>
+
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-primary-900 via-secondary-600 to-accent-600 bg-clip-text text-transparent">
+                Expanda Seu Negócio
+              </span>
+              <br />
+              <span className="text-primary-900">Com o Plano Ideal</span>
+            </h1>
+
+            <p className="text-xl text-primary-600 mb-10 max-w-3xl mx-auto leading-relaxed">
+              Escolha o plano perfeito para alavancar sua carreira como profissional.
+              <span className="font-semibold text-secondary-700"> 14 dias de garantia incondicional</span>
+            </p>
+
+            {/* Billing Toggle */}
+            <div className="inline-flex items-center gap-3 bg-white rounded-full p-2 shadow-lg border border-primary-100">
+              <button
+                onClick={() => setBillingCycle('monthly')}
+                className={`px-6 py-2 rounded-full font-medium transition-all ${
+                  billingCycle === 'monthly'
+                    ? 'bg-gradient-secondary text-white shadow-glow-cyan'
+                    : 'text-primary-600 hover:text-secondary-600'
+                }`}
+              >
+                Mensal
+              </button>
+              <button
+                onClick={() => setBillingCycle('yearly')}
+                className={`px-6 py-2 rounded-full font-medium transition-all flex items-center gap-2 ${
+                  billingCycle === 'yearly'
+                    ? 'bg-gradient-secondary text-white shadow-glow-cyan'
+                    : 'text-primary-600 hover:text-secondary-600'
+                }`}
+              >
+                Anual
+                <span className="text-xs px-2 py-0.5 bg-accent-500 text-white rounded-full">
+                  -16%
+                </span>
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Billing Toggle */}
-      <div className="pb-16 px-8">
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <div className="inline-flex items-center gap-4 bg-black/5 p-2 rounded-full">
-            <button
-              onClick={() => setBillingPeriod('monthly')}
-              className={`px-8 py-3 rounded-full font-medium transition-all ${
-                billingPeriod === 'monthly'
-                  ? 'bg-black text-white'
-                  : 'text-black/60 hover:text-black'
-              }`}
-            >
-              Mensal
-            </button>
-            <button
-              onClick={() => setBillingPeriod('yearly')}
-              className={`px-8 py-3 rounded-full font-medium transition-all relative ${
-                billingPeriod === 'yearly'
-                  ? 'bg-black text-white'
-                  : 'text-black/60 hover:text-black'
-              }`}
-            >
-              Anual
-              <Badge className="absolute -top-2 -right-2 bg-gold text-black border-0 text-xs px-2 py-0.5">
-                -20%
-              </Badge>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Pricing Cards */}
-      <section className="pb-20 px-8">
+      {/* Plans Section */}
+      <section className="pb-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            {plans.map((plan) => (
-              <div
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={staggerChildren}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            {plans.map((plan, index) => (
+              <motion.div
                 key={plan.id}
-                className={`relative ${
-                  plan.featured
-                    ? 'md:scale-110 md:-mt-8 z-10'
-                    : ''
-                }`}
+                variants={fadeIn}
+                whileHover={{ y: -8 }}
+                className="relative group"
               >
                 {plan.featured && (
-                  <div className="absolute -top-6 left-0 right-0 flex justify-center">
-                    <Badge className="bg-gold text-black border-0 px-6 py-2 text-sm font-semibold">
-                      <Crown className="w-4 h-4 mr-2" />
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <div className="px-4 py-1.5 bg-gradient-to-r from-accent-500 to-accent-600 text-white rounded-full text-xs font-bold shadow-lg">
                       MAIS POPULAR
-                    </Badge>
+                    </div>
                   </div>
                 )}
 
-                <div
-                  className={`p-10 border-2 transition-all ${
-                    plan.featured
-                      ? 'border-gold bg-gold/5 shadow-2xl'
-                      : 'border-black/10 hover:border-gold/50 hover:shadow-xl'
-                  }`}
-                >
-                  {/* Header */}
-                  <div className="text-center mb-8">
-                    <h3 className="font-heading text-3xl font-bold mb-2">{plan.name}</h3>
-                    <p className="text-black/60">{plan.description}</p>
+                <div className={`relative bg-white rounded-2xl p-8 border-2 transition-all h-full ${
+                  plan.featured
+                    ? 'border-accent-400 shadow-2xl'
+                    : 'border-primary-100 hover:border-secondary-300 hover:shadow-xl'
+                }`}>
+                  {/* Icon */}
+                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${plan.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <plan.icon className="w-8 h-8 text-white" />
                   </div>
 
+                  {/* Plan Name */}
+                  <h3 className="text-2xl font-bold text-primary-900 mb-2">{plan.name}</h3>
+                  <p className="text-primary-600 mb-6">{plan.description}</p>
+
                   {/* Price */}
-                  <div className="text-center mb-8 pb-8 border-b border-black/10">
-                    <div className="flex items-start justify-center gap-2 mb-2">
-                      <span className="text-2xl font-bold mt-2">R$</span>
-                      <span className="text-6xl font-heading font-bold">
-                        {billingPeriod === 'monthly' ? plan.price : Math.floor(plan.yearlyPrice / 12)}
+                  <div className="mb-6">
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-5xl font-bold text-primary-900">
+                        R$ {billingCycle === 'monthly' ? plan.monthlyPrice : Math.floor(plan.yearlyPrice / 12)}
                       </span>
+                      <span className="text-primary-500">/mês</span>
                     </div>
-                    <p className="text-black/60">
-                      por mês{billingPeriod === 'yearly' && ', cobrado anualmente'}
-                    </p>
-                    {billingPeriod === 'yearly' && (
-                      <p className="text-sm text-gold font-semibold mt-2">
-                        Economize R$ {(plan.price * 12 - plan.yearlyPrice).toFixed(0)}/ano
+                    {billingCycle === 'yearly' && (
+                      <p className="text-sm text-primary-500 mt-2">
+                        R$ {plan.yearlyPrice} cobrado anualmente
                       </p>
                     )}
                   </div>
 
-                  {/* Features */}
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${
-                          plan.featured ? 'text-gold' : 'text-black'
-                        }`} />
-                        <span className={feature.startsWith('Tudo do') ? 'font-semibold' : ''}>
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-
                   {/* CTA Button */}
-                  <button
-                    className={`w-full py-4 font-semibold transition-all duration-300 ${
-                      plan.featured
-                        ? 'bg-black text-white hover:bg-gold hover:text-black'
-                        : 'bg-black/5 hover:bg-black hover:text-white'
-                    }`}
-                  >
-                    Começar Agora
+                  <button className={`w-full py-4 rounded-xl font-bold text-lg mb-8 transition-all ${
+                    plan.featured
+                      ? 'bg-gradient-to-r from-accent-500 to-accent-600 text-white hover:shadow-glow-violet'
+                      : 'bg-gradient-secondary text-white hover:shadow-glow-cyan'
+                  }`}>
+                    {plan.featured ? 'Começar Agora' : 'Escolher Plano'}
                   </button>
 
-                  {plan.featured && (
-                    <p className="text-center text-sm text-black/60 mt-4">
-                      14 dias de garantia incondicional
-                    </p>
-                  )}
+                  {/* Features */}
+                  <div className="space-y-3">
+                    {plan.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-start gap-3">
+                        <div className={`flex-shrink-0 w-5 h-5 rounded-full ${
+                          plan.featured ? 'bg-accent-100' : 'bg-secondary-100'
+                        } flex items-center justify-center mt-0.5`}>
+                          <Check className={`w-3 h-3 ${
+                            plan.featured ? 'text-accent-600' : 'text-secondary-600'
+                          }`} />
+                        </div>
+                        <span className="text-primary-700 text-sm leading-relaxed">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Concierge Service Add-on for Ouro */}
-      <section className="py-32 px-8 bg-black text-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gold mb-6">
-              <Sparkles className="w-10 h-10 text-black" />
-            </div>
-            <h2 className="font-heading text-5xl font-bold mb-6">Serviço de Concierge VIP</h2>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Exclusivo para membros Ouro: atendimento personalizado e suporte dedicado
-              para transformar seus projetos em experiências premium
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="text-center p-8 border border-white/10">
-              <Phone className="w-12 h-12 text-gold mx-auto mb-4" />
-              <h3 className="font-heading text-xl font-bold mb-3">Linha Direta VIP</h3>
-              <p className="text-white/70">
-                Acesso direto ao seu gerente de conta via telefone, WhatsApp ou email
-              </p>
-            </div>
-
-            <div className="text-center p-8 border border-white/10">
-              <Calendar className="w-12 h-12 text-gold mx-auto mb-4" />
-              <h3 className="font-heading text-xl font-bold mb-3">Agendamento Prioritário</h3>
-              <p className="text-white/70">
-                Prioridade absoluta no agendamento de serviços e projetos especiais
-              </p>
-            </div>
-
-            <div className="text-center p-8 border border-white/10">
-              <MessageCircle className="w-12 h-12 text-gold mx-auto mb-4" />
-              <h3 className="font-heading text-xl font-bold mb-3">Consultoria Dedicada</h3>
-              <p className="text-white/70">
-                Acompanhamento personalizado do início ao fim de cada projeto
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <button className="inline-flex items-center justify-center gap-2 px-12 py-5 bg-gold text-black hover:bg-white transition-all duration-300 text-lg font-semibold">
-              <Crown className="w-5 h-5" />
-              Ativar Plano Ouro + Concierge
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Table */}
-      <section className="py-32 px-8 bg-black/[0.02]">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-heading text-5xl font-bold text-center mb-16">Compare os Planos</h2>
-
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b-2 border-black/10">
-                  <th className="text-left p-6 font-heading text-xl">Recursos</th>
-                  <th className="text-center p-6 font-heading text-xl">Bronze</th>
-                  <th className="text-center p-6 font-heading text-xl">Prata</th>
-                  <th className="text-center p-6 font-heading text-xl bg-gold/10">Ouro</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-b border-black/5">
-                  <td className="p-6">Solicitações mensais</td>
-                  <td className="text-center p-6">10</td>
-                  <td className="text-center p-6">Ilimitadas</td>
-                  <td className="text-center p-6 bg-gold/5">Ilimitadas</td>
-                </tr>
-                <tr className="border-b border-black/5">
-                  <td className="p-6">Portfolio de fotos</td>
-                  <td className="text-center p-6">5</td>
-                  <td className="text-center p-6">15</td>
-                  <td className="text-center p-6 bg-gold/5">Ilimitado</td>
-                </tr>
-                <tr className="border-b border-black/5">
-                  <td className="p-6">Tempo de resposta</td>
-                  <td className="text-center p-6">24h</td>
-                  <td className="text-center p-6">12h</td>
-                  <td className="text-center p-6 bg-gold/5">Imediato</td>
-                </tr>
-                <tr className="border-b border-black/5">
-                  <td className="p-6">Suporte</td>
-                  <td className="text-center p-6">Email</td>
-                  <td className="text-center p-6">Prioritário</td>
-                  <td className="text-center p-6 bg-gold/5">VIP 24/7</td>
-                </tr>
-                <tr className="border-b border-black/5">
-                  <td className="p-6">Gerente de conta</td>
-                  <td className="text-center p-6">-</td>
-                  <td className="text-center p-6">-</td>
-                  <td className="text-center p-6 bg-gold/5">
-                    <Check className="w-6 h-6 text-gold mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-black/5">
-                  <td className="p-6">Projetos exclusivos</td>
-                  <td className="text-center p-6">-</td>
-                  <td className="text-center p-6">-</td>
-                  <td className="text-center p-6 bg-gold/5">
-                    <Check className="w-6 h-6 text-gold mx-auto" />
-                  </td>
-                </tr>
-                <tr className="border-b border-black/5">
-                  <td className="p-6">Seguro de responsabilidade</td>
-                  <td className="text-center p-6">-</td>
-                  <td className="text-center p-6">-</td>
-                  <td className="text-center p-6 bg-gold/5">
-                    <Check className="w-6 h-6 text-gold mx-auto" />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section - Minimal Accordion */}
-      <section className="py-32 px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-5xl font-bold text-center mb-16">Perguntas Frequentes</h2>
-
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, idx) => (
-              <AccordionItem
-                key={idx}
-                value={`item-${idx}`}
-                className="border-2 border-black/5 hover:border-gold/30 transition-colors px-8"
-              >
-                <AccordionTrigger className="text-left font-heading text-xl py-6">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-lg text-black/70 pb-6">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="py-32 px-8 bg-black text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-heading text-6xl font-bold mb-8">Agende uma Consulta</h2>
-          <p className="text-2xl text-white/80 mb-12 font-light">
-            Ainda tem dúvidas? Fale com nosso time e descubra qual plano é ideal para você
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="inline-flex items-center justify-center gap-2 px-12 py-5 bg-gold text-black hover:bg-white transition-all duration-300 text-lg font-semibold">
-              <Calendar className="w-5 h-5" />
-              Agendar Consulta Gratuita
-            </button>
-            <a
-              href="https://wa.me/5522999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-12 py-5 border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 text-lg font-semibold"
-            >
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Trust Footer */}
-      <section className="py-16 px-8 border-t border-black/5">
+      {/* Comparison Section */}
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <Star className="w-8 h-8 text-gold mx-auto mb-3" />
-              <p className="font-semibold mb-1">Garantia de 14 dias</p>
-              <p className="text-sm text-black/60">Satisfação garantida ou seu dinheiro de volta</p>
-            </div>
-            <div>
-              <Check className="w-8 h-8 text-gold mx-auto mb-3" />
-              <p className="font-semibold mb-1">Sem fidelidade</p>
-              <p className="text-sm text-black/60">Cancele quando quiser, sem burocracia</p>
-            </div>
-            <div>
-              <Crown className="w-8 h-8 text-gold mx-auto mb-3" />
-              <p className="font-semibold mb-1">Upgrade facilitado</p>
-              <p className="text-sm text-black/60">Mude de plano a qualquer momento</p>
-            </div>
-          </div>
+          <motion.div className="text-center mb-16" {...fadeIn}>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4">
+              Por Que Escolher um Plano Premium?
+            </h2>
+            <p className="text-xl text-primary-600 max-w-2xl mx-auto">
+              Invista no seu crescimento profissional
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-4 gap-6"
+            variants={staggerChildren}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            {[
+              {
+                icon: Zap,
+                title: '3x Mais Clientes',
+                description: 'Profissionais premium recebem em média 3x mais solicitações'
+              },
+              {
+                icon: TrendingUp,
+                title: 'ROI em 30 Dias',
+                description: 'Maioria dos profissionais paga o plano com apenas 1-2 projetos'
+              },
+              {
+                icon: Award,
+                title: 'Maior Credibilidade',
+                description: 'Badge premium aumenta confiança e taxa de conversão'
+              },
+              {
+                icon: Shield,
+                title: '100% Seguro',
+                description: '14 dias de garantia incondicional de devolução'
+              },
+            ].map((benefit, index) => (
+              <motion.div
+                key={index}
+                variants={fadeIn}
+                whileHover={{ y: -8 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-secondary flex items-center justify-center">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-bold text-primary-900 mb-2 text-lg">{benefit.title}</h3>
+                <p className="text-primary-600 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-8 border-t border-black/5 bg-black/[0.02]">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-black/50 text-sm">2024 TeleObra24h. Todos os direitos reservados.</p>
+      {/* FAQ Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <motion.div className="text-center mb-16" {...fadeIn}>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary-900 mb-4">
+              Perguntas Frequentes
+            </h2>
+            <p className="text-xl text-primary-600">
+              Tire suas dúvidas sobre os planos
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="space-y-4"
+            variants={staggerChildren}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+          >
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                variants={fadeIn}
+                className="bg-white rounded-2xl border border-primary-100 overflow-hidden"
+              >
+                <button
+                  onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-primary-50 transition-colors"
+                >
+                  <span className="font-semibold text-primary-900">{faq.question}</span>
+                  <ChevronRight className={`w-5 h-5 text-primary-400 transition-transform ${
+                    expandedFaq === index ? 'rotate-90' : ''
+                  }`} />
+                </button>
+                {expandedFaq === index && (
+                  <div className="px-6 pb-5 text-primary-600 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
-      </footer>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-secondary-600 via-secondary-500 to-accent-600 text-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600')] bg-cover bg-center opacity-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent-400 rounded-full blur-3xl opacity-30" />
+
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div {...fadeIn}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Comece Hoje Sem Riscos
+            </h2>
+            <p className="text-2xl mb-10 text-white/90 max-w-2xl mx-auto">
+              14 dias de garantia incondicional. Cancele quando quiser, sem multas.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-secondary-700 rounded-xl font-bold text-lg shadow-2xl hover:bg-primary-50 transition-all">
+                Escolher Plano
+                <ChevronRight className="w-5 h-5" />
+              </button>
+              <Link
+                href="/busca"
+                className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-transparent border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white hover:text-secondary-700 transition-all"
+              >
+                Ver Profissionais
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </main>
   );
 }
