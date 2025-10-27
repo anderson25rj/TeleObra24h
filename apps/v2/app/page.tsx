@@ -2,9 +2,10 @@
 
 import type { Metadata } from 'next';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import { ArrowRight, Users, Briefcase, Star, MapPin, Play, TrendingUp, Award, Clock } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Star, MapPin, Play, TrendingUp, Award, Clock, Sparkles } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
+import { ThemeToggle } from '@teleobra24h/ui';
 
 // Mock data imports (we'll use inline data for now)
 const stats = {
@@ -117,8 +118,53 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-secondary-100 shadow-md">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-gradient-vibrant rounded-xl flex items-center justify-center shadow-lg">
+                <Sparkles className="w-6 h-6 text-white" />
+              </div>
+              <span className="font-heading text-2xl font-black bg-gradient-vibrant bg-clip-text text-transparent">
+                TeleObra24h
+              </span>
+            </Link>
+
+            <div className="hidden md:flex items-center gap-6">
+              <Link href="/" className="text-sm font-semibold text-gray-700 hover:text-primary-600 transition-colors">
+                Início
+              </Link>
+              <Link href="/busca" className="text-sm font-semibold text-gray-700 hover:text-primary-600 transition-colors">
+                Buscar
+              </Link>
+              <Link href="/sobre" className="text-sm font-semibold text-gray-700 hover:text-primary-600 transition-colors">
+                Sobre
+              </Link>
+              <Link href="/planos" className="text-sm font-semibold text-gray-700 hover:text-primary-600 transition-colors">
+                Planos
+              </Link>
+              <ThemeToggle />
+              <Link
+                href="/busca"
+                className="px-6 py-2.5 bg-gradient-vibrant text-white rounded-xl font-bold shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
+              >
+                Começar Agora
+              </Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <button className="md:hidden p-2 text-gray-700">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary-50 via-primary-50 to-accent-50">
+      <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary-50 via-primary-50 to-accent-50 pt-20">
         {/* Background Image - Grupo de pessoas em construção */}
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600')] bg-cover bg-center opacity-15" style={{ zIndex: 0 }} />
 
