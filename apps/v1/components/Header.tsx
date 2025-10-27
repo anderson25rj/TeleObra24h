@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Button } from '@teleobra24h/ui';
+import { Button, ThemeToggle } from '@teleobra24h/ui';
 import { Menu, Phone, User } from 'lucide-react';
 import { useState } from 'react';
 
@@ -44,6 +44,7 @@ export function Header() {
               <Phone className="w-4 h-4" />
               <span className="font-semibold">(22) 9 9999-9999</span>
             </a>
+            <ThemeToggle />
             <Button variant="outline" size="sm">
               <User className="w-4 h-4 mr-2" />
               Entrar
@@ -83,6 +84,10 @@ export function Header() {
                 <Phone className="w-4 h-4" />
                 <span>(22) 9 9999-9999</span>
               </a>
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">Tema:</span>
+                <ThemeToggle />
+              </div>
               <Button variant="outline" size="sm" className="w-full">
                 <User className="w-4 h-4 mr-2" />
                 Entrar
