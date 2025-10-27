@@ -43,12 +43,12 @@ const professional = {
 };
 
 const portfolio = [
-  { id: 1, title: 'Construção de Muro', description: 'Alvenaria estrutural residencial', category: 'Alvenaria', image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400' },
-  { id: 2, title: 'Reforma Completa', description: 'Casa residencial de 120m²', category: 'Reforma', image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400' },
-  { id: 3, title: 'Revestimento de Fachada', description: 'Aplicação de pastilhas premium', category: 'Acabamento', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400' },
-  { id: 4, title: 'Construção de Churrasqueira', description: 'Área de lazer completa', category: 'Lazer', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400' },
-  { id: 5, title: 'Ampliação Residencial', description: 'Novo quarto e banheiro', category: 'Ampliação', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400' },
-  { id: 6, title: 'Piso Cerâmico', description: 'Instalação em 80m²', category: 'Acabamento', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400' },
+  { id: 1, title: 'Construção de Muro', description: 'Alvenaria estrutural residencial', category: 'Alvenaria', image: 'https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?w=400&h=300' },
+  { id: 2, title: 'Reforma Completa', description: 'Casa residencial de 120m²', category: 'Reforma', image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?w=400&h=300' },
+  { id: 3, title: 'Revestimento de Fachada', description: 'Aplicação de pastilhas premium', category: 'Acabamento', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=300' },
+  { id: 4, title: 'Construção de Churrasqueira', description: 'Área de lazer completa', category: 'Lazer', image: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?w=400&h=300' },
+  { id: 5, title: 'Ampliação Residencial', description: 'Novo quarto e banheiro', category: 'Ampliação', image: 'https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?w=400&h=300' },
+  { id: 6, title: 'Piso Cerâmico', description: 'Instalação em 80m²', category: 'Acabamento', image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&h=300' },
 ];
 
 const reviews = [

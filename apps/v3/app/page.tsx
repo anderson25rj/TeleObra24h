@@ -76,7 +76,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">
         {/* Background Image with Overlay */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600')] bg-cover bg-center opacity-5" />
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?w=1600')] bg-cover bg-center opacity-5" />
 
         {/* Gradient Orbs */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-secondary-200 rounded-full blur-3xl opacity-20 animate-pulse" />
@@ -274,7 +274,7 @@ export default function HomePage() {
       <section className="py-20 px-6 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600')] bg-cover bg-center" />
+          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=1600')] bg-cover bg-center" />
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -424,7 +424,7 @@ export default function HomePage() {
       {/* CTA Section */}
       <section className="py-20 px-6 bg-gradient-to-br from-secondary-600 via-secondary-500 to-accent-600 text-white relative overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?w=1600')] bg-cover bg-center opacity-10" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent-400 rounded-full blur-3xl opacity-30" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary-700 rounded-full blur-3xl opacity-30" />
 
