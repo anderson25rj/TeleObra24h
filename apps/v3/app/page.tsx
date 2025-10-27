@@ -17,6 +17,7 @@ import {
   MapPin,
   Zap
 } from 'lucide-react';
+import { ThemeToggle } from '@teleobra24h/ui';
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -60,6 +61,7 @@ export default function HomePage() {
               <Link href="/planos" className="text-sm font-medium text-primary-700 hover:text-secondary-600 transition-colors">
                 Planos
               </Link>
+              <ThemeToggle />
               <Link
                 href="/busca"
                 className="px-6 py-2.5 bg-gradient-secondary text-white rounded-lg font-medium shadow-lg hover:shadow-glow-cyan transition-all"
