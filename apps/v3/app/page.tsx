@@ -10,7 +10,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from '@repo/ui/components/command';
+} from '@teleobra24h/ui/components/command';
 
 export default function HomePage() {
   const [open, setOpen] = useState(false);

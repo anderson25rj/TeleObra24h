@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Check, Crown, Star, Sparkles, MessageCircle, Phone, Calendar, ChevronDown, ChevronUp } from 'lucide-react';
-import { Badge } from '@repo/ui/components/badge';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@repo/ui/components/accordion';
+import { Badge } from '@teleobra24h/ui/components/badge';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@teleobra24h/ui/components/accordion';
 
 const plans = [
   {

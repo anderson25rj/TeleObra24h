@@ -10,8 +10,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@repo/ui/components/sheet';
-import { Badge } from '@repo/ui/components/badge';
+} from '@teleobra24h/ui/components/sheet';
+import { Badge } from '@teleobra24h/ui/components/badge';
 
 // Mock data - in production, this would come from API/packages/mocks
 const professionals = [

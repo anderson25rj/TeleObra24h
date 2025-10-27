@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, MapPin, Star, Award, Clock, Phone, MessageCircle, CheckCircle, Calendar, TrendingUp } from 'lucide-react';
-import { Badge } from '@repo/ui/components/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@repo/ui/components/tabs';
+import { Badge } from '@teleobra24h/ui/components/badge';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@teleobra24h/ui/components/tabs';
 
 // Mock professional data
 const professional = {
