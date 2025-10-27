@@ -1,8 +1,4 @@
 {
-  "buildCommand": "cd ../.. && npm run build:v1",
-  "outputDirectory": ".next",
-  "devCommand": "npm run dev",
-  "installCommand": "cd ../.. && npm install",
   "framework": "nextjs",
   "regions": ["gru1"],
   "env": {
