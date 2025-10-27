@@ -2,9 +2,22 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, MapPin, Star, Award, Clock, Phone, MessageCircle, CheckCircle, Calendar, TrendingUp } from 'lucide-react';
-import { Badge } from '@teleobra24h/ui/components/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@teleobra24h/ui/components/tabs';
+import { motion } from 'framer-motion';
+import {
+  ArrowLeft,
+  MapPin,
+  Star,
+  Award,
+  Clock,
+  Phone,
+  MessageCircle,
+  CheckCircle,
+  Calendar,
+  TrendingUp,
+  Sparkles,
+  Shield,
+  Briefcase
+} from 'lucide-react';
 
 // Mock professional data
 const professional = {
@@ -30,12 +43,12 @@ const professional = {
 };
 
 const portfolio = [
-  { id: 1, title: 'Construção de Muro', description: 'Alvenaria estrutural residencial', category: 'Alvenaria' },
-  { id: 2, title: 'Reforma Completa', description: 'Casa residencial de 120m²', category: 'Reforma' },
-  { id: 3, title: 'Revestimento de Fachada', description: 'Aplicação de pastilhas premium', category: 'Acabamento' },
-  { id: 4, title: 'Construção de Churrasqueira', description: 'Área de lazer completa', category: 'Lazer' },
-  { id: 5, title: 'Ampliação Residencial', description: 'Novo quarto e banheiro', category: 'Ampliação' },
-  { id: 6, title: 'Piso Cerâmico', description: 'Instalação em 80m²', category: 'Acabamento' },
+  { id: 1, title: 'Construção de Muro', description: 'Alvenaria estrutural residencial', category: 'Alvenaria', image: 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=400' },
+  { id: 2, title: 'Reforma Completa', description: 'Casa residencial de 120m²', category: 'Reforma', image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=400' },
+  { id: 3, title: 'Revestimento de Fachada', description: 'Aplicação de pastilhas premium', category: 'Acabamento', image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400' },
+  { id: 4, title: 'Construção de Churrasqueira', description: 'Área de lazer completa', category: 'Lazer', image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400' },
+  { id: 5, title: 'Ampliação Residencial', description: 'Novo quarto e banheiro', category: 'Ampliação', image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400' },
+  { id: 6, title: 'Piso Cerâmico', description: 'Instalação em 80m²', category: 'Acabamento', image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400' },
 ];
 
 const reviews = [
@@ -73,286 +86,329 @@ const reviews = [
   },
 ];
 
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 }
+};
+
+const staggerChildren = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
 export default function PerfilPage({ params }: { params: { id: string } }) {
-  const [activeTab, setActiveTab] = useState('portfolio');
+  const [activeTab, setActiveTab] = useState<'portfolio' | 'reviews'>('portfolio');
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-secondary-50">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-black/5">
-        <div className="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
-          <Link href="/busca" className="flex items-center gap-3">
-            <ArrowLeft className="w-5 h-5" />
-            <span className="font-heading text-2xl font-bold tracking-tight">
-              TeleObra<span className="text-gold">24h</span>
-            </span>
-          </Link>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-primary-100 shadow-sm">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/busca" className="flex items-center gap-3">
+              <ArrowLeft className="w-5 h-5 text-primary-600" />
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-gradient-secondary rounded-lg flex items-center justify-center">
+                  <Sparkles className="w-5 h-5 text-white" />
+                </div>
+                <span className="font-heading text-xl font-bold bg-gradient-to-r from-primary-900 to-secondary-600 bg-clip-text text-transparent">
+                  TeleObra24h
+                </span>
+              </div>
+            </Link>
 
-          <div className="flex items-center gap-6">
-            <Link href="/sobre" className="text-sm hover:text-gold transition-colors">
-              Sobre
-            </Link>
-            <Link href="/planos" className="text-sm hover:text-gold transition-colors">
-              Planos
-            </Link>
+            <div className="hidden md:flex items-center gap-8">
+              <Link href="/sobre" className="text-sm font-medium text-primary-700 hover:text-secondary-600 transition-colors">
+                Sobre
+              </Link>
+              <Link href="/planos" className="text-sm font-medium text-primary-700 hover:text-secondary-600 transition-colors">
+                Planos
+              </Link>
+            </div>
           </div>
         </div>
       </nav>
 
-      {/* Hero Header - Large & Elegant */}
-      <section className="pt-32 pb-20 px-8 bg-black text-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
-            {/* Avatar */}
-            <div className="w-40 h-40 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
-              <span className="text-6xl font-heading font-bold text-black">
-                {professional.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-              </span>
-            </div>
+      {/* Hero Header */}
+      <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-secondary-200 rounded-full blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-200 rounded-full blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }} />
 
-            {/* Info */}
-            <div className="flex-1 text-center md:text-left">
-              <div className="mb-4">
-                <Badge className="bg-gold text-black border-0 px-4 py-2 text-sm">
-                  <Award className="w-4 h-4 mr-2" />
-                  Premium Verificado
-                </Badge>
-              </div>
-
-              <h1 className="font-heading text-5xl md:text-6xl font-bold mb-4 text-gold">
-                {professional.name}
-              </h1>
-
-              <p className="text-2xl text-white/80 mb-6">{professional.category}</p>
-
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 mb-8">
-                <div className="flex items-center gap-2">
-                  <MapPin className="w-5 h-5 text-gold" />
-                  <span className="text-white/80">{professional.location}</span>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Profile Card */}
+            <motion.div {...fadeIn} className="lg:col-span-1">
+              <div className="bg-white rounded-2xl p-8 border border-primary-100 shadow-xl sticky top-24">
+                {/* Avatar */}
+                <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-secondary flex items-center justify-center text-white text-4xl font-bold shadow-glow-cyan">
+                  {professional.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="flex gap-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-gold text-gold" />
-                    ))}
-                  </div>
-                  <span className="font-bold text-xl">{professional.rating}</span>
-                  <span className="text-white/60">({professional.reviews_count} avaliações)</span>
-                </div>
-              </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-3 gap-6 mb-8">
-                <div className="text-center md:text-left">
-                  <div className="text-3xl font-heading font-bold text-gold mb-1">{professional.years_experience}</div>
-                  <div className="text-sm text-white/60">Anos de Experiência</div>
-                </div>
-                <div className="text-center md:text-left">
-                  <div className="text-3xl font-heading font-bold text-gold mb-1">{professional.completed_jobs}</div>
-                  <div className="text-sm text-white/60">Projetos Concluídos</div>
-                </div>
-                <div className="text-center md:text-left">
-                  <div className="text-3xl font-heading font-bold text-gold mb-1">{professional.response_time}</div>
-                  <div className="text-sm text-white/60">Tempo de Resposta</div>
-                </div>
-              </div>
-
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <button className="flex items-center justify-center gap-2 px-8 py-4 bg-gold text-black hover:bg-white transition-all duration-300 font-semibold">
-                  <Calendar className="w-5 h-5" />
-                  Solicitar Consulta
-                </button>
-                <a
-                  href={`https://wa.me/${professional.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  WhatsApp
-                </a>
-                <a
-                  href={`tel:${professional.phone}`}
-                  className="flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-black transition-all duration-300 font-semibold"
-                >
-                  <Phone className="w-5 h-5" />
-                  Ligar
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Certifications - Prominent Gold Badges */}
-      <section className="py-20 px-8 border-b border-black/5">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="font-heading text-3xl font-bold mb-8 text-center">Certificações & Qualificações</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {professional.certifications.map((cert, idx) => (
-              <div key={idx} className="p-8 border-2 border-gold/30 bg-gold/5 hover:border-gold hover:bg-gold/10 transition-all">
-                <div className="flex items-start gap-4">
-                  <CheckCircle className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-semibold text-lg">{cert}</p>
+                {/* Badge */}
+                <div className="flex justify-center mb-4">
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-accent-500 to-accent-600 text-white rounded-full text-sm font-semibold">
+                    <Award className="w-4 h-4" />
+                    Premium Verificado
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Bio Section */}
-      <section className="py-20 px-8 bg-black/[0.02]">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="font-heading text-3xl font-bold mb-6">Sobre o Profissional</h2>
-          <p className="text-xl text-black/70 leading-relaxed mb-8">{professional.bio}</p>
+                {/* Name & Category */}
+                <h1 className="text-3xl font-bold text-primary-900 text-center mb-2">
+                  {professional.name}
+                </h1>
+                <p className="text-lg text-primary-600 text-center mb-6">{professional.category}</p>
 
-          <div>
-            <h3 className="font-semibold text-lg mb-4">Especialidades</h3>
-            <div className="flex flex-wrap gap-3">
-              {professional.specialties.map((spec, idx) => (
-                <Badge key={idx} className="bg-black text-white border-0 px-4 py-2 text-sm">
-                  {spec}
-                </Badge>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+                {/* Location & Rating */}
+                <div className="space-y-3 mb-8">
+                  <div className="flex items-center justify-center gap-2 text-primary-600">
+                    <MapPin className="w-5 h-5 text-secondary-600" />
+                    <span>{professional.location}</span>
+                  </div>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-5 h-5 fill-accent-500 text-accent-500" />
+                      ))}
+                    </div>
+                    <span className="font-bold text-lg text-primary-900">{professional.rating}</span>
+                    <span className="text-primary-500">({professional.reviews_count})</span>
+                  </div>
+                </div>
 
-      {/* Tabs Section - Portfolio & Reviews */}
-      <section className="py-20 px-8">
-        <div className="max-w-6xl mx-auto">
-          <Tabs defaultValue="portfolio" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-black/5 p-1">
-              <TabsTrigger
-                value="portfolio"
-                className="data-[state=active]:bg-black data-[state=active]:text-white"
-              >
-                Portfolio
-              </TabsTrigger>
-              <TabsTrigger
-                value="reviews"
-                className="data-[state=active]:bg-black data-[state=active]:text-white"
-              >
-                Avaliações
-              </TabsTrigger>
-            </TabsList>
+                {/* Stats Grid */}
+                <div className="grid grid-cols-3 gap-4 mb-8 p-4 bg-primary-50 rounded-xl">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-secondary-700 mb-1">{professional.years_experience}</div>
+                    <div className="text-xs text-primary-600">Anos</div>
+                  </div>
+                  <div className="text-center border-x border-primary-200">
+                    <div className="text-2xl font-bold text-secondary-700 mb-1">{professional.completed_jobs}</div>
+                    <div className="text-xs text-primary-600">Projetos</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-secondary-700 mb-1">{professional.response_time}</div>
+                    <div className="text-xs text-primary-600">Resposta</div>
+                  </div>
+                </div>
 
-            {/* Portfolio Grid with Fade */}
-            <TabsContent value="portfolio" className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {portfolio.map((item) => (
-                  <div
-                    key={item.id}
-                    className="group border border-black/5 hover:border-gold/50 hover:shadow-xl transition-all duration-500 overflow-hidden"
+                {/* Pricing */}
+                <div className="mb-8 p-4 bg-gradient-to-br from-secondary-50 to-accent-50 rounded-xl border border-secondary-200">
+                  <div className="flex items-baseline gap-2 justify-center mb-1">
+                    <span className="text-3xl font-bold text-primary-900">R$ {professional.hourly_rate}</span>
+                    <span className="text-primary-500">/hora</span>
+                  </div>
+                  <div className="text-center text-sm text-primary-600">
+                    ou R$ {professional.daily_rate}/diária
+                  </div>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="space-y-3">
+                  <button className="w-full py-4 bg-gradient-secondary text-white rounded-xl font-semibold hover:shadow-glow-cyan transition-all flex items-center justify-center gap-2">
+                    <Calendar className="w-5 h-5" />
+                    Solicitar Consulta
+                  </button>
+                  <a
+                    href={`https://wa.me/${professional.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-4 bg-white border-2 border-primary-200 text-primary-900 rounded-xl font-semibold hover:border-secondary-400 transition-all flex items-center justify-center gap-2"
                   >
-                    {/* Image Placeholder */}
-                    <div className="h-64 bg-black/5 relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      <div className="absolute top-4 left-4">
-                        <Badge className="bg-gold text-black border-0">{item.category}</Badge>
-                      </div>
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <h3 className="font-heading text-xl font-bold mb-2 group-hover:text-gold transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-black/60">{item.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </TabsContent>
-
-            {/* Reviews - Elegant Cards */}
-            <TabsContent value="reviews" className="mt-0">
-              <div className="space-y-8">
-                {reviews.map((review) => (
-                  <div key={review.id} className="p-8 border border-black/5 hover:border-gold/30 transition-colors">
-                    <div className="flex items-start justify-between mb-6">
-                      <div>
-                        <div className="flex gap-1 mb-3">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className={`w-5 h-5 ${
-                                i < review.rating ? 'fill-gold text-gold' : 'text-black/20'
-                              }`}
-                            />
-                          ))}
-                        </div>
-                        <p className="font-semibold text-lg">{review.client_name}</p>
-                        <p className="text-sm text-black/50">{review.service_type}</p>
-                      </div>
-                      <p className="text-sm text-black/50">{new Date(review.date).toLocaleDateString('pt-BR')}</p>
-                    </div>
-
-                    <p className="font-heading text-xl leading-relaxed text-black/80">
-                      "{review.comment}"
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Review Stats */}
-              <div className="mt-12 p-8 bg-black text-white">
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                  <div>
-                    <div className="text-4xl font-heading font-bold text-gold mb-2">{professional.rating}</div>
-                    <div className="text-sm text-white/60">Avaliação Média</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-heading font-bold text-gold mb-2">96%</div>
-                    <div className="text-sm text-white/60">Recomendações</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-heading font-bold text-gold mb-2">100%</div>
-                    <div className="text-sm text-white/60">Pontualidade</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-heading font-bold text-gold mb-2">98%</div>
-                    <div className="text-sm text-white/60">Qualidade</div>
-                  </div>
+                    <MessageCircle className="w-5 h-5" />
+                    WhatsApp
+                  </a>
+                  <a
+                    href={`tel:${professional.phone}`}
+                    className="w-full py-4 bg-white border-2 border-primary-200 text-primary-900 rounded-xl font-semibold hover:border-secondary-400 transition-all flex items-center justify-center gap-2"
+                  >
+                    <Phone className="w-5 h-5" />
+                    {professional.phone}
+                  </a>
                 </div>
               </div>
-            </TabsContent>
-          </Tabs>
-        </div>
-      </section>
+            </motion.div>
 
-      {/* CTA Section - Floating Glass Effect */}
-      <section className="py-20 px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative p-12 bg-black text-white overflow-hidden">
-            {/* Glassmorphism overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent" />
+            {/* Main Content */}
+            <div className="lg:col-span-2 space-y-8">
+              {/* Bio Section */}
+              <motion.div {...fadeIn} transition={{ delay: 0.2 }} className="bg-white rounded-2xl p-8 border border-primary-100 shadow-lg">
+                <h2 className="text-2xl font-bold text-primary-900 mb-4">Sobre o Profissional</h2>
+                <p className="text-primary-700 leading-relaxed mb-6">{professional.bio}</p>
 
-            <div className="relative z-10 text-center">
-              <h2 className="font-heading text-4xl font-bold mb-6">Pronto Para Começar Seu Projeto?</h2>
-              <p className="text-xl text-white/80 mb-8">
-                Agende uma consulta gratuita e receba um orçamento personalizado
-              </p>
-              <button className="inline-flex items-center justify-center gap-2 px-12 py-5 bg-gold text-black hover:bg-white transition-all duration-300 text-lg font-semibold">
-                <Calendar className="w-5 h-5" />
-                Solicitar Consulta Gratuita
-              </button>
+                <h3 className="font-semibold text-primary-900 mb-3">Especialidades</h3>
+                <div className="flex flex-wrap gap-2">
+                  {professional.specialties.map((spec, idx) => (
+                    <div key={idx} className="px-4 py-2 bg-secondary-100 text-secondary-700 rounded-lg text-sm font-medium">
+                      {spec}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Certifications */}
+              <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="bg-white rounded-2xl p-8 border border-primary-100 shadow-lg">
+                <h2 className="text-2xl font-bold text-primary-900 mb-6">Certificações</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {professional.certifications.map((cert, idx) => (
+                    <div key={idx} className="flex items-start gap-3 p-4 border border-secondary-200 rounded-xl hover:border-secondary-400 hover:bg-secondary-50 transition-all">
+                      <CheckCircle className="w-5 h-5 text-secondary-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-primary-700 font-medium">{cert}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+
+              {/* Tabs */}
+              <motion.div {...fadeIn} transition={{ delay: 0.4 }} className="bg-white rounded-2xl p-8 border border-primary-100 shadow-lg">
+                {/* Tab Buttons */}
+                <div className="flex gap-2 mb-8 bg-primary-50 p-2 rounded-xl">
+                  <button
+                    onClick={() => setActiveTab('portfolio')}
+                    className={`flex-1 py-3 rounded-lg font-semibold transition-all ${
+                      activeTab === 'portfolio'
+                        ? 'bg-gradient-secondary text-white shadow-lg'
+                        : 'text-primary-600 hover:text-secondary-600'
+                    }`}
+                  >
+                    <Briefcase className="w-5 h-5 inline-block mr-2" />
+                    Portfolio
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('reviews')}
+                    className={`flex-1 py-3 rounded-lg font-semibold transition-all ${
+                      activeTab === 'reviews'
+                        ? 'bg-gradient-secondary text-white shadow-lg'
+                        : 'text-primary-600 hover:text-secondary-600'
+                    }`}
+                  >
+                    <Star className="w-5 h-5 inline-block mr-2" />
+                    Avaliações
+                  </button>
+                </div>
+
+                {/* Portfolio Tab */}
+                {activeTab === 'portfolio' && (
+                  <motion.div
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                    variants={staggerChildren}
+                    initial="initial"
+                    animate="animate"
+                  >
+                    {portfolio.map((item, index) => (
+                      <motion.div
+                        key={item.id}
+                        variants={fadeIn}
+                        className="group rounded-xl overflow-hidden border border-primary-100 hover:border-secondary-300 hover:shadow-xl transition-all"
+                      >
+                        <div className="relative h-48 bg-primary-100 overflow-hidden">
+                          <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                          <div className="absolute top-3 left-3">
+                            <div className="px-3 py-1 bg-secondary-600 text-white rounded-full text-xs font-semibold">
+                              {item.category}
+                            </div>
+                          </div>
+                        </div>
+                        <div className="p-4">
+                          <h3 className="font-bold text-primary-900 mb-2 group-hover:text-secondary-700 transition-colors">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm text-primary-600">{item.description}</p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </motion.div>
+                )}
+
+                {/* Reviews Tab */}
+                {activeTab === 'reviews' && (
+                  <motion.div
+                    className="space-y-6"
+                    variants={staggerChildren}
+                    initial="initial"
+                    animate="animate"
+                  >
+                    {reviews.map((review) => (
+                      <motion.div
+                        key={review.id}
+                        variants={fadeIn}
+                        className="p-6 border border-primary-100 rounded-xl hover:border-secondary-300 transition-all"
+                      >
+                        <div className="flex items-start justify-between mb-4">
+                          <div>
+                            <div className="flex gap-1 mb-2">
+                              {[...Array(5)].map((_, i) => (
+                                <Star
+                                  key={i}
+                                  className={`w-4 h-4 ${
+                                    i < review.rating ? 'fill-accent-500 text-accent-500' : 'text-primary-200'
+                                  }`}
+                                />
+                              ))}
+                            </div>
+                            <p className="font-semibold text-primary-900">{review.client_name}</p>
+                            <p className="text-sm text-primary-500">{review.service_type}</p>
+                          </div>
+                          <p className="text-sm text-primary-500">{new Date(review.date).toLocaleDateString('pt-BR')}</p>
+                        </div>
+                        <p className="text-primary-700 leading-relaxed italic">
+                          "{review.comment}"
+                        </p>
+                      </motion.div>
+                    ))}
+
+                    {/* Review Stats */}
+                    <div className="mt-8 p-6 bg-gradient-to-br from-primary-900 to-primary-800 rounded-xl text-white">
+                      <h3 className="font-bold text-lg mb-6 text-center">Estatísticas de Avaliação</h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div>
+                          <div className="text-3xl font-bold text-secondary-400 mb-1">{professional.rating}</div>
+                          <div className="text-xs text-primary-200">Média Geral</div>
+                        </div>
+                        <div>
+                          <div className="text-3xl font-bold text-secondary-400 mb-1">96%</div>
+                          <div className="text-xs text-primary-200">Recomendações</div>
+                        </div>
+                        <div>
+                          <div className="text-3xl font-bold text-secondary-400 mb-1">100%</div>
+                          <div className="text-xs text-primary-200">Pontualidade</div>
+                        </div>
+                        <div>
+                          <div className="text-3xl font-bold text-secondary-400 mb-1">98%</div>
+                          <div className="text-xs text-primary-200">Qualidade</div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-12 px-8 border-t border-black/5">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-black/50 text-sm">2024 TeleObra24h. Todos os direitos reservados.</p>
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-secondary-600 via-secondary-500 to-accent-600 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600')] bg-cover bg-center opacity-10" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div {...fadeIn}>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Pronto Para Começar Seu Projeto?
+            </h2>
+            <p className="text-2xl mb-10 text-white/90 max-w-2xl mx-auto">
+              Agende uma consulta gratuita e receba um orçamento personalizado
+            </p>
+            <button className="inline-flex items-center justify-center gap-2 px-10 py-5 bg-white text-secondary-700 rounded-xl font-bold text-lg shadow-2xl hover:bg-primary-50 transition-all">
+              <Calendar className="w-5 h-5" />
+              Solicitar Consulta Gratuita
+            </button>
+          </motion.div>
         </div>
-      </footer>
+      </section>
     </main>
   );
 }
