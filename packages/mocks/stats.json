@@ -1,0 +1,157 @@
+{
+  "platform": {
+    "total_professionals": 1247,
+    "active_professionals": 892,
+    "verified_professionals": 678,
+    "total_clients": 3458,
+    "completed_services": 8934,
+    "ongoing_services": 127,
+    "cities_covered": 12,
+    "average_response_time": "2.5 horas",
+    "platform_rating": 4.8,
+    "total_reviews": 6742
+  },
+  "region_lagos": {
+    "total_professionals": 247,
+    "cities": [
+      {
+        "name": "São Pedro da Aldeia",
+        "professionals": 89,
+        "completed_services": 2341
+      },
+      {
+        "name": "Cabo Frio",
+        "professionals": 124,
+        "completed_services": 3156
+      },
+      {
+        "name": "Búzios",
+        "professionals": 67,
+        "completed_services": 1789
+      },
+      {
+        "name": "Araruama",
+        "professionals": 78,
+        "completed_services": 1967
+      },
+      {
+        "name": "Iguaba Grande",
+        "professionals": 45,
+        "completed_services": 892
+      },
+      {
+        "name": "Saquarema",
+        "professionals": 53,
+        "completed_services": 1134
+      }
+    ]
+  },
+  "categories": {
+    "most_requested": [
+      {
+        "category": "Elétrica",
+        "requests": 2834,
+        "percentage": 28.5
+      },
+      {
+        "category": "Hidráulica",
+        "requests": 2456,
+        "percentage": 24.7
+      },
+      {
+        "category": "Alvenaria",
+        "requests": 1923,
+        "percentage": 19.3
+      },
+      {
+        "category": "Pintura",
+        "requests": 1567,
+        "percentage": 15.8
+      },
+      {
+        "category": "Reparos Gerais",
+        "requests": 789,
+        "percentage": 7.9
+      },
+      {
+        "category": "Marcenaria",
+        "requests": 234,
+        "percentage": 2.4
+      },
+      {
+        "category": "Reformas",
+        "requests": 131,
+        "percentage": 1.4
+      }
+    ]
+  },
+  "satisfaction": {
+    "client_satisfaction": 96.8,
+    "would_recommend": 94.3,
+    "return_rate": 78.5,
+    "average_rating": 4.7,
+    "five_star_reviews": 73.2,
+    "four_star_reviews": 18.6,
+    "three_star_reviews": 5.8,
+    "two_star_reviews": 1.7,
+    "one_star_reviews": 0.7
+  },
+  "response_times": {
+    "under_1_hour": 34.2,
+    "1_to_3_hours": 42.8,
+    "3_to_6_hours": 16.5,
+    "6_to_12_hours": 4.8,
+    "over_12_hours": 1.7
+  },
+  "service_completion": {
+    "on_time": 87.3,
+    "early": 8.4,
+    "delayed_acceptable": 3.2,
+    "delayed_significant": 1.1
+  },
+  "growth": {
+    "monthly_new_professionals": 47,
+    "monthly_new_clients": 156,
+    "monthly_growth_rate": 12.3,
+    "year_over_year_growth": 187.5
+  },
+  "emergency_services": {
+    "total_emergency_calls": 1456,
+    "average_response_time": "45 minutos",
+    "24h_availability": 234,
+    "emergency_satisfaction": 94.7
+  },
+  "financial": {
+    "total_transactions": 8934,
+    "average_service_value": 847.50,
+    "total_platform_volume": 7567245.00,
+    "payment_methods": {
+      "pix": 52.3,
+      "credit_card": 28.7,
+      "debit_card": 12.4,
+      "cash": 6.6
+    }
+  },
+  "subscription_plans": {
+    "bronze": {
+      "count": 423,
+      "percentage": 47.4
+    },
+    "prata": {
+      "count": 312,
+      "percentage": 35.0
+    },
+    "ouro": {
+      "count": 157,
+      "percentage": 17.6
+    }
+  },
+  "certifications": {
+    "verified_professionals": 678,
+    "with_certifications": 234,
+    "nr10_certified": 89,
+    "technical_diploma": 156,
+    "professional_license": 67
+  },
+  "last_updated": "2024-10-27T10:30:00Z"
+}

@@ -1,0 +1,48 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# Testing
+coverage
+*.lcov
+.nyc_output
+
+# Next.js
+.next/
+out/
+build
+dist
+*.tsbuildinfo
+next-env.d.ts
+
+# Production
+.vercel
+.turbo
+
+# Environment variables
+.env
+.env*.local
+.env.production
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# IDEs
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Misc
+*.pem
+.cache

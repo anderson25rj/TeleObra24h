@@ -1,0 +1,68 @@
+[
+  {
+    "id": "test-001",
+    "name": "Maria Clara Santos",
+    "role": "Cliente",
+    "location": "São Pedro da Aldeia, RJ",
+    "photo": "/images/testimonials/maria-clara.jpg",
+    "quote": "Encontrei um eletricista excelente através do TeleObra24h. O atendimento foi rápido, o profissional muito competente e o preço justo. Agora sempre que preciso de um serviço, consulto a plataforma primeiro!",
+    "rating": 5,
+    "service_used": "Instalação elétrica",
+    "date": "2024-09-15"
+  },
+  {
+    "id": "test-002",
+    "name": "Carlos Eduardo Silva",
+    "role": "Profissional",
+    "location": "São Pedro da Aldeia, RJ",
+    "photo": "/images/testimonials/carlos-eduardo.jpg",
+    "quote": "Como pedreiro profissional, o TeleObra24h transformou meu negócio. Recebo solicitações de trabalho constantemente e posso escolher os projetos que mais me interessam. A plataforma é séria e me conecta com clientes de qualidade.",
+    "rating": 5,
+    "professional_category": "Pedreiro",
+    "date": "2024-10-01"
+  },
+  {
+    "id": "test-003",
+    "name": "Roberto Almeida",
+    "role": "Cliente",
+    "location": "Cabo Frio, RJ",
+    "photo": "/images/testimonials/roberto-almeida.jpg",
+    "quote": "Precisava reformar minha casa e estava perdido sem saber por onde começar. No TeleObra24h encontrei todos os profissionais que precisava - pedreiro, pintor, eletricista. Todos verificados e com ótimas avaliações. A reforma ficou perfeita!",
+    "rating": 5,
+    "service_used": "Reforma completa",
+    "date": "2024-08-22"
+  },
+  {
+    "id": "test-004",
+    "name": "André Luiz Costa",
+    "role": "Profissional",
+    "location": "São Pedro da Aldeia, RJ",
+    "photo": "/images/testimonials/andre-luiz.jpg",
+    "quote": "Sou eletricista há 18 anos e o TeleObra24h é a melhor ferramenta que encontrei para divulgar meu trabalho. O selo de verificação me dá credibilidade e os clientes confiam mais no meu serviço. Recomendo para todos os colegas de profissão!",
+    "rating": 5,
+    "professional_category": "Eletricista",
+    "date": "2024-09-10"
+  },
+  {
+    "id": "test-005",
+    "name": "Patricia Lima",
+    "role": "Cliente",
+    "location": "Búzios, RJ",
+    "photo": "/images/testimonials/patricia-lima.jpg",
+    "quote": "Minha experiência com o TeleObra24h foi excepcional. Contratei um pintor para minha casa de praia e o resultado superou todas as expectativas. O sistema de avaliações é muito confiável, você realmente consegue escolher bons profissionais.",
+    "rating": 5,
+    "service_used": "Pintura decorativa",
+    "date": "2024-10-05"
+  },
+  {
+    "id": "test-006",
+    "name": "Leonardo Cardoso",
+    "role": "Profissional",
+    "location": "São Pedro da Aldeia, RJ",
+    "photo": "/images/testimonials/leonardo-cardoso.jpg",
+    "quote": "Como marceneiro especializado em móveis planejados, estava difícil alcançar novos clientes. Com o TeleObra24h, meu portfólio está sempre visível e recebo pedidos de orçamento semanalmente. A plataforma me ajudou a crescer profissionalmente.",
+    "rating": 5,
+    "professional_category": "Marceneiro",
+    "date": "2024-08-30"
+  }
+]

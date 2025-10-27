@@ -1,0 +1,28 @@
+{
+  "name": "@teleobra24h/mocks",
+  "version": "1.0.0",
+  "description": "Mock data for TeleObra24h platform",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./professionals": "./professionals.json",
+    "./reviews": "./reviews.json",
+    "./services": "./services.json",
+    "./testimonials": "./testimonials.json",
+    "./stats": "./stats.json",
+    "./faq": "./faq.json",
+    "./types": "./types.ts"
+  },
+  "scripts": {
+    "validate": "node validate.js"
+  },
+  "keywords": [
+    "mock",
+    "data",
+    "teleobra24h",
+    "construction"
+  ],
+  "author": "TeleObra24h",
+  "license": "MIT"
+}

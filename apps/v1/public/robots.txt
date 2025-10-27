@@ -1,0 +1,35 @@
+# TeleObra24h V1 - Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+Allow: /busca
+Allow: /perfil/*
+Allow: /sobre
+Allow: /planos
+
+# AI Crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Disallow admin and internal pages (if any in future)
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap location
+Sitemap: https://v1-teleobra24h.vercel.app/sitemap.xml

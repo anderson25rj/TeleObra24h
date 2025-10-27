@@ -1,0 +1,82 @@
+[
+  {
+    "id": "faq-001",
+    "category": "Geral",
+    "question": "Como funciona o TeleObra24h?",
+    "answer": "O TeleObra24h é uma plataforma que conecta profissionais da construção civil com clientes que precisam de serviços. Você pode buscar por categoria de serviço, localização, avaliações e preço. Todos os profissionais são verificados e avaliados por clientes reais.",
+    "order": 1,
+    "helpful_count": 234
+  },
+  {
+    "id": "faq-002",
+    "category": "Para Clientes",
+    "question": "Como escolher um bom profissional?",
+    "answer": "Recomendamos observar: (1) Avaliações e comentários de outros clientes, (2) Selo de verificado, (3) Tempo de resposta, (4) Portfólio de trabalhos realizados, (5) Anos de experiência, (6) Badges conquistados. Profissionais com plano Ouro geralmente têm mais experiência e comprometimento.",
+    "order": 2,
+    "helpful_count": 189
+  },
+  {
+    "id": "faq-003",
+    "category": "Para Clientes",
+    "question": "Os profissionais são verificados?",
+    "answer": "Sim! Todos os profissionais com o selo 'Pro Verificado' passaram por um processo de verificação que inclui: documentação pessoal, comprovante de endereço, registro profissional (quando aplicável) e referências. Além disso, monitoramos constantemente as avaliações dos clientes.",
+    "order": 3,
+    "helpful_count": 167
+  },
+  {
+    "id": "faq-004",
+    "category": "Pagamento",
+    "question": "Como funciona o pagamento?",
+    "answer": "O pagamento é combinado diretamente entre você e o profissional. Aceitamos diversas formas: PIX, dinheiro, cartão de crédito/débito. Recomendamos sempre pedir um orçamento detalhado antes de iniciar o serviço e combinar a forma de pagamento antecipadamente.",
+    "order": 4,
+    "helpful_count": 198
+  },
+  {
+    "id": "faq-005",
+    "category": "Pagamento",
+    "question": "Existe taxa para contratar um profissional?",
+    "answer": "Não! Para clientes, o uso da plataforma é 100% gratuito. Você não paga nada para buscar, entrar em contato ou contratar profissionais. Paga apenas pelo serviço prestado diretamente ao profissional.",
+    "order": 5,
+    "helpful_count": 223
+  },
+  {
+    "id": "faq-006",
+    "category": "Emergências",
+    "question": "Tem atendimento para emergências?",
+    "answer": "Sim! Profissionais com o badge 'Emergência 24h' oferecem atendimento urgente para problemas como vazamentos, falta de energia, entupimentos graves e outros. Filtre por 'Disponibilidade: 24/7' na busca para encontrá-los.",
+    "order": 6,
+    "helpful_count": 156
+  },
+  {
+    "id": "faq-007",
+    "category": "Para Profissionais",
+    "question": "Como me cadastrar como profissional?",
+    "answer": "É fácil! Clique em 'Quero ser um Pro' no menu, preencha seus dados profissionais, envie documentos para verificação, escolha seu plano (Bronze, Prata ou Ouro) e comece a receber solicitações de clientes. O cadastro é aprovado em até 24 horas.",
+    "order": 7,
+    "helpful_count": 142
+  },
+  {
+    "id": "faq-008",
+    "category": "Para Profissionais",
+    "question": "Quais são os planos disponíveis para profissionais?",
+    "answer": "Oferecemos 3 planos: Bronze (básico, visibilidade padrão), Prata (destaque moderado, badges extras, resposta prioritária) e Ouro (máxima visibilidade, todos os badges, aparece primeiro nas buscas, suporte premium). Cada plano tem benefícios específicos para alavancar seu negócio.",
+    "order": 8,
+    "helpful_count": 178
+  },
+  {
+    "id": "faq-009",
+    "category": "Garantias",
+    "question": "Existe garantia dos serviços prestados?",
+    "answer": "A garantia é combinada diretamente entre você e o profissional antes do início do serviço. Recomendamos sempre solicitar garantia por escrito para serviços de maior valor. Em caso de problemas não resolvidos, nossa equipe de suporte pode mediar a situação.",
+    "order": 9,
+    "helpful_count": 134
+  },
+  {
+    "id": "faq-010",
+    "category": "Suporte",
+    "question": "Como entro em contato com o suporte?",
+    "answer": "Nossa equipe está disponível de segunda a sexta, das 8h às 18h. Você pode entrar em contato pelo WhatsApp (22) 99999-9999, e-mail suporte@teleobra24h.com.br ou pelo chat na plataforma. Para emergências fora do horário, utilize o canal direto com o profissional.",
+    "order": 10,
+    "helpful_count": 112
+  }
+]

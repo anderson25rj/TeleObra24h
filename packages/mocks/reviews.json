@@ -1,0 +1,382 @@
+[
+  {
+    "id": "rev-001",
+    "professional_id": "prof-001",
+    "client_name": "Maria Fernanda Silva",
+    "rating": 5,
+    "comment": "Excelente profissional! O Carlos fez a reforma da minha casa com muita qualidade e pontualidade. Recomendo muito!",
+    "date": "2024-10-15",
+    "service_type": "Reforma completa",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-002",
+    "professional_id": "prof-001",
+    "client_name": "João Carlos Mendes",
+    "rating": 5,
+    "comment": "Construiu um muro de 30 metros na minha propriedade. Trabalho impecável, muito caprichoso e organizado. O material foi bem aproveitado.",
+    "date": "2024-09-28",
+    "service_type": "Construção de muro",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-003",
+    "professional_id": "prof-001",
+    "client_name": "Ana Paula Rodrigues",
+    "rating": 5,
+    "comment": "Fez o revestimento da fachada da minha casa. Ficou lindo! Profissional experiente e confiável.",
+    "date": "2024-08-12",
+    "service_type": "Revestimento de fachada",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-004",
+    "professional_id": "prof-002",
+    "client_name": "Pedro Henrique Costa",
+    "rating": 5,
+    "comment": "Roberto é um excelente mestre de obras. Fez a laje da minha casa nova com perfeição. Muito profissional!",
+    "date": "2024-10-08",
+    "service_type": "Construção de laje",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-005",
+    "professional_id": "prof-002",
+    "client_name": "Juliana Alves",
+    "rating": 4,
+    "comment": "Bom trabalho na fundação da minha casa. Só demorou um pouco mais que o previsto por conta do tempo chuvoso, mas ficou bem feito.",
+    "date": "2024-09-20",
+    "service_type": "Fundação",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-006",
+    "professional_id": "prof-002",
+    "client_name": "Marcos Vinicius Santos",
+    "rating": 5,
+    "comment": "Profissional competente e honesto. Fez todo o trabalho de alvenaria da minha obra com qualidade.",
+    "date": "2024-08-30",
+    "service_type": "Alvenaria estrutural",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-007",
+    "professional_id": "prof-003",
+    "client_name": "Patricia Lima",
+    "rating": 5,
+    "comment": "João Paulo reformou minha casa de praia em Búzios. Trabalho de altíssima qualidade, acabamento perfeito. Vale cada centavo!",
+    "date": "2024-10-01",
+    "service_type": "Reforma alto padrão",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-008",
+    "professional_id": "prof-003",
+    "client_name": "Roberto Farias",
+    "rating": 5,
+    "comment": "Construiu uma churrasqueira incrível na minha área de lazer. Profissional dedicado e detalhista.",
+    "date": "2024-09-15",
+    "service_type": "Construção de churrasqueira",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-009",
+    "professional_id": "prof-003",
+    "client_name": "Carla Medeiros",
+    "rating": 4,
+    "comment": "Ótimo trabalho na reforma do banheiro. Ficou muito bonito, mas o prazo estendeu um pouco.",
+    "date": "2024-08-22",
+    "service_type": "Reforma de banheiro",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-010",
+    "professional_id": "prof-004",
+    "client_name": "Renato Oliveira",
+    "rating": 5,
+    "comment": "André é simplesmente o melhor eletricista que já contratei! Instalou um sistema de energia solar na minha casa. Trabalho perfeito, muito profissional e pontual.",
+    "date": "2024-10-12",
+    "service_type": "Instalação energia solar",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-011",
+    "professional_id": "prof-004",
+    "client_name": "Luciana Pereira",
+    "rating": 5,
+    "comment": "Fez toda a parte elétrica da minha casa nova. Impecável! Explicou tudo detalhadamente e usou materiais de primeira qualidade.",
+    "date": "2024-09-25",
+    "service_type": "Instalação elétrica completa",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-012",
+    "professional_id": "prof-004",
+    "client_name": "Eduardo Martins",
+    "rating": 5,
+    "comment": "Instalou automação residencial na minha casa. Ficou show! Muito conhecimento técnico.",
+    "date": "2024-08-18",
+    "service_type": "Automação residencial",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-013",
+    "professional_id": "prof-004",
+    "client_name": "Beatriz Gomes",
+    "rating": 5,
+    "comment": "Resolveu um problema elétrico complexo que outros eletricistas não conseguiram. Muito competente!",
+    "date": "2024-07-30",
+    "service_type": "Manutenção elétrica",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-014",
+    "professional_id": "prof-005",
+    "client_name": "Gabriel Souza",
+    "rating": 5,
+    "comment": "Fernando atendeu uma emergência elétrica às 23h. Muito prestativo e resolveu rápido. Recomendo!",
+    "date": "2024-10-05",
+    "service_type": "Emergência elétrica",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-015",
+    "professional_id": "prof-005",
+    "client_name": "Adriana Castro",
+    "rating": 4,
+    "comment": "Bom profissional. Fez a instalação elétrica do meu comércio com qualidade. Preço justo.",
+    "date": "2024-09-10",
+    "service_type": "Instalação comercial",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-016",
+    "professional_id": "prof-005",
+    "client_name": "Ricardo Barbosa",
+    "rating": 5,
+    "comment": "Fez manutenção preventiva no quadro elétrico. Profissional e educado.",
+    "date": "2024-08-05",
+    "service_type": "Manutenção preventiva",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-017",
+    "professional_id": "prof-006",
+    "client_name": "Fernanda Dias",
+    "rating": 5,
+    "comment": "Marcelo trocou toda a fiação antiga da minha casa. Trabalho limpo e bem organizado. Muito satisfeita!",
+    "date": "2024-10-03",
+    "service_type": "Troca de fiação",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-018",
+    "professional_id": "prof-006",
+    "client_name": "Lucas Ferreira",
+    "rating": 5,
+    "comment": "Instalou chuveiro elétrico e várias tomadas. Serviço rápido e bem feito.",
+    "date": "2024-09-18",
+    "service_type": "Instalação residencial",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-019",
+    "professional_id": "prof-006",
+    "client_name": "Simone Araújo",
+    "rating": 4,
+    "comment": "Bom atendimento e serviço de qualidade. Recomendo!",
+    "date": "2024-08-28",
+    "service_type": "Instalações diversas",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-020",
+    "professional_id": "prof-007",
+    "client_name": "Antonio Carlos Silva",
+    "rating": 5,
+    "comment": "Paulo detectou e resolveu um vazamento que ninguém conseguia achar. Excelente profissional, muito técnico!",
+    "date": "2024-10-10",
+    "service_type": "Detecção de vazamento",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-021",
+    "professional_id": "prof-007",
+    "client_name": "Mariana Lopes",
+    "rating": 5,
+    "comment": "Instalou sistema de aquecimento solar na minha casa. Trabalho impecável e muito profissionalismo.",
+    "date": "2024-09-22",
+    "service_type": "Aquecimento solar",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-022",
+    "professional_id": "prof-007",
+    "client_name": "José Roberto Alves",
+    "rating": 5,
+    "comment": "Fez toda a instalação hidráulica da minha casa nova. Muito caprichoso e organizado.",
+    "date": "2024-08-14",
+    "service_type": "Instalação hidráulica",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-023",
+    "professional_id": "prof-007",
+    "client_name": "Camila Mendes",
+    "rating": 4,
+    "comment": "Resolveu problema de esgoto entupido. Profissional competente.",
+    "date": "2024-07-20",
+    "service_type": "Desentupimento",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-024",
+    "professional_id": "prof-008",
+    "client_name": "Daniel Rocha",
+    "rating": 5,
+    "comment": "Ricardo atendeu emergência de vazamento às 2h da manhã. Muito prestativo e resolveu na hora!",
+    "date": "2024-10-06",
+    "service_type": "Emergência hidráulica",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-025",
+    "professional_id": "prof-008",
+    "client_name": "Paula Cristina",
+    "rating": 5,
+    "comment": "Instalou pressurizador de água na minha casa. Agora a pressão está perfeita! Recomendo.",
+    "date": "2024-09-12",
+    "service_type": "Instalação pressurizador",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-026",
+    "professional_id": "prof-008",
+    "client_name": "Vinicius Lima",
+    "rating": 4,
+    "comment": "Trocou a caixa d'água e fez manutenção nas tubulações. Bom trabalho.",
+    "date": "2024-08-25",
+    "service_type": "Troca caixa d'água",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-027",
+    "professional_id": "prof-009",
+    "client_name": "Claudia Monteiro",
+    "rating": 5,
+    "comment": "Thiago pintou minha casa toda com texturas lindas! Trabalho de artista, ficou espetacular!",
+    "date": "2024-10-08",
+    "service_type": "Pintura com textura",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-028",
+    "professional_id": "prof-009",
+    "client_name": "Rodrigo Pinto",
+    "rating": 5,
+    "comment": "Pintou a fachada da minha casa com acabamento perfeito. Muito profissional e caprichoso.",
+    "date": "2024-09-17",
+    "service_type": "Pintura de fachada",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-029",
+    "professional_id": "prof-009",
+    "client_name": "Isabela Freitas",
+    "rating": 5,
+    "comment": "Excelente pintor! Fez efeitos decorativos na sala que ficaram maravilhosos.",
+    "date": "2024-08-20",
+    "service_type": "Pintura decorativa",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-030",
+    "professional_id": "prof-010",
+    "client_name": "Marcelo Teixeira",
+    "rating": 4,
+    "comment": "Daniel pintou minha casa por um preço bom. Trabalho satisfatório, recomendo.",
+    "date": "2024-10-02",
+    "service_type": "Pintura residencial",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-031",
+    "professional_id": "prof-010",
+    "client_name": "Sandra Oliveira",
+    "rating": 5,
+    "comment": "Pintou as grades e portões da minha casa. Ficou muito bom, caprichado.",
+    "date": "2024-09-08",
+    "service_type": "Pintura de grades",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-032",
+    "professional_id": "prof-010",
+    "client_name": "Rafael Moreira",
+    "rating": 4,
+    "comment": "Bom trabalho na pintura externa. Preço justo e pontual.",
+    "date": "2024-08-15",
+    "service_type": "Pintura externa",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-033",
+    "professional_id": "prof-011",
+    "client_name": "Larissa Cardoso",
+    "rating": 5,
+    "comment": "Leonardo é um artista! Fez minha cozinha planejada dos sonhos. Cada detalhe pensado com perfeição. Vale muito a pena!",
+    "date": "2024-10-11",
+    "service_type": "Cozinha planejada",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-034",
+    "professional_id": "prof-011",
+    "client_name": "Bruno Henrique",
+    "rating": 5,
+    "comment": "Fez um closet incrível em madeira maciça. Trabalho de altíssima qualidade, recomendo muito!",
+    "date": "2024-09-19",
+    "service_type": "Closet sob medida",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-035",
+    "professional_id": "prof-011",
+    "client_name": "Aline Souza",
+    "rating": 5,
+    "comment": "Móveis lindos e de qualidade excepcional. Leonardo entende muito de design!",
+    "date": "2024-08-27",
+    "service_type": "Móveis sob medida",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-036",
+    "professional_id": "prof-012",
+    "client_name": "Fábio Rodrigues",
+    "rating": 5,
+    "comment": "Rafael instalou todas as portas da minha casa nova. Serviço perfeito e bem feito.",
+    "date": "2024-10-04",
+    "service_type": "Instalação de portas",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-037",
+    "professional_id": "prof-012",
+    "client_name": "Tatiana Almeida",
+    "rating": 5,
+    "comment": "Consertou o armário da minha cozinha que estava quebrado. Ficou perfeito, nem parece que teve problema!",
+    "date": "2024-09-14",
+    "service_type": "Reparo de armário",
+    "verified_purchase": true
+  },
+  {
+    "id": "rev-038",
+    "professional_id": "prof-012",
+    "client_name": "Carlos Alberto",
+    "rating": 4,
+    "comment": "Bom marceneiro, fez reparos diversos na minha casa. Trabalho competente.",
+    "date": "2024-08-10",
+    "service_type": "Reparos gerais",
+    "verified_purchase": true
+  }
+]

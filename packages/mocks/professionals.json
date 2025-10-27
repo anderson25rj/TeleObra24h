@@ -1,0 +1,527 @@
+[
+  {
+    "id": "prof-001",
+    "name": "Carlos Eduardo Silva",
+    "category": "Pedreiro",
+    "location": {
+      "city": "São Pedro da Aldeia",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8431,
+        "lng": -42.1015
+      }
+    },
+    "rating": 4.9,
+    "reviews_count": 87,
+    "verified": true,
+    "badges": ["Pro Verificado", "Top Rated", "Resposta Rápida"],
+    "bio": "Pedreiro profissional com mais de 15 anos de experiência em construção e reformas. Especializado em alvenaria estrutural, revestimentos e acabamentos de qualidade. Trabalho com pontualidade e compromisso.",
+    "hourly_rate": 65,
+    "daily_rate": 450,
+    "subscription_plan": "ouro",
+    "years_experience": 15,
+    "completed_jobs": 234,
+    "response_time": "2 horas",
+    "availability": "Imediata",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/carlos-001.jpg",
+        "description": "Construção de muro em alvenaria estrutural"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/carlos-002.jpg",
+        "description": "Reforma completa de casa residencial"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/carlos-003.jpg",
+        "description": "Revestimento de fachada com pastilhas"
+      }
+    ],
+    "specialties": ["Alvenaria estrutural", "Revestimentos", "Muros", "Reformas completas"],
+    "phone": "(22) 98765-4321",
+    "whatsapp": "5522987654321",
+    "member_since": "2023-01-15"
+  },
+  {
+    "id": "prof-002",
+    "name": "Roberto Almeida Santos",
+    "category": "Pedreiro",
+    "location": {
+      "city": "Cabo Frio",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8788,
+        "lng": -42.0194
+      }
+    },
+    "rating": 4.7,
+    "reviews_count": 65,
+    "verified": true,
+    "badges": ["Pro Verificado", "Confiável"],
+    "bio": "Mestre de obras e pedreiro qualificado. Atuo em toda Região dos Lagos com serviços de alvenaria, fundações e lajes. Orçamento sem compromisso e garantia de qualidade.",
+    "hourly_rate": 60,
+    "daily_rate": 420,
+    "subscription_plan": "prata",
+    "years_experience": 12,
+    "completed_jobs": 178,
+    "response_time": "4 horas",
+    "availability": "Disponível",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/roberto-001.jpg",
+        "description": "Construção de laje pré-moldada"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/roberto-002.jpg",
+        "description": "Fundação radier para casa"
+      }
+    ],
+    "specialties": ["Fundações", "Lajes", "Alvenaria", "Concretagem"],
+    "phone": "(22) 99876-5432",
+    "whatsapp": "5522998765432",
+    "member_since": "2023-03-22"
+  },
+  {
+    "id": "prof-003",
+    "name": "João Paulo Ferreira",
+    "category": "Pedreiro",
+    "location": {
+      "city": "Búzios",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.7469,
+        "lng": -41.8819
+      }
+    },
+    "rating": 4.8,
+    "reviews_count": 52,
+    "verified": true,
+    "badges": ["Pro Verificado", "Especialista"],
+    "bio": "Pedreiro especializado em construções de alto padrão e reformas em Búzios. Trabalho com materiais de primeira linha e acabamentos refinados. Atendimento personalizado.",
+    "hourly_rate": 70,
+    "daily_rate": 500,
+    "subscription_plan": "ouro",
+    "years_experience": 10,
+    "completed_jobs": 145,
+    "response_time": "1 hora",
+    "availability": "Imediata",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/joao-001.jpg",
+        "description": "Reforma de casa de praia em Búzios"
+      },
+      {
+        "type": "video",
+        "url": "/videos/portfolio/joao-tour.mp4",
+        "description": "Tour virtual - Casa alto padrão"
+      }
+    ],
+    "specialties": ["Alto padrão", "Reformas luxury", "Piscinas", "Churrasqueiras"],
+    "phone": "(22) 98111-2233",
+    "whatsapp": "5522981112233",
+    "member_since": "2023-02-10"
+  },
+  {
+    "id": "prof-004",
+    "name": "André Luiz Costa",
+    "category": "Eletricista",
+    "location": {
+      "city": "São Pedro da Aldeia",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8431,
+        "lng": -42.1015
+      }
+    },
+    "rating": 5.0,
+    "reviews_count": 94,
+    "verified": true,
+    "badges": ["Pro Verificado", "Top Rated", "Resposta Rápida", "5 Estrelas"],
+    "bio": "Eletricista certificado com NR10 e curso técnico. Instalações residenciais e comerciais, quadros de distribuição, automação residencial e energia solar. Trabalho com segurança e qualidade.",
+    "hourly_rate": 80,
+    "daily_rate": 550,
+    "subscription_plan": "ouro",
+    "years_experience": 18,
+    "completed_jobs": 312,
+    "response_time": "30 minutos",
+    "availability": "Imediata",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/andre-001.jpg",
+        "description": "Instalação de quadro elétrico trifásico"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/andre-002.jpg",
+        "description": "Sistema de energia solar residencial"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/andre-003.jpg",
+        "description": "Automação residencial completa"
+      }
+    ],
+    "specialties": ["NR10", "Energia solar", "Automação", "Quadros elétricos", "Certificações"],
+    "certifications": ["NR10", "Técnico em Eletrotécnica", "Instalador Solar"],
+    "phone": "(22) 99234-5678",
+    "whatsapp": "5522992345678",
+    "member_since": "2022-11-05"
+  },
+  {
+    "id": "prof-005",
+    "name": "Fernando Mendes",
+    "category": "Eletricista",
+    "location": {
+      "city": "Cabo Frio",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8788,
+        "lng": -42.0194
+      }
+    },
+    "rating": 4.6,
+    "reviews_count": 71,
+    "verified": true,
+    "badges": ["Pro Verificado", "Emergência 24h"],
+    "bio": "Eletricista com atendimento 24h para emergências. Especializado em instalações prediais, manutenção preventiva e corretiva. Atendo toda a Região dos Lagos.",
+    "hourly_rate": 75,
+    "daily_rate": 520,
+    "subscription_plan": "prata",
+    "years_experience": 14,
+    "completed_jobs": 256,
+    "response_time": "1 hora",
+    "availability": "24/7",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/fernando-001.jpg",
+        "description": "Instalação elétrica predial comercial"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/fernando-002.jpg",
+        "description": "Manutenção de rede elétrica industrial"
+      }
+    ],
+    "specialties": ["Emergências", "Predial", "Industrial", "Manutenção"],
+    "phone": "(22) 99345-6789",
+    "whatsapp": "5522993456789",
+    "member_since": "2023-01-20"
+  },
+  {
+    "id": "prof-006",
+    "name": "Marcelo Ribeiro",
+    "category": "Eletricista",
+    "location": {
+      "city": "Araruama",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8719,
+        "lng": -42.3428
+      }
+    },
+    "rating": 4.8,
+    "reviews_count": 48,
+    "verified": true,
+    "badges": ["Pro Verificado", "Confiável"],
+    "bio": "Eletricista residencial e comercial. Instalações novas, reformas, troca de fiação antiga, instalação de chuveiros, tomadas e disjuntores. Serviço limpo e organizado.",
+    "hourly_rate": 70,
+    "daily_rate": 480,
+    "subscription_plan": "prata",
+    "years_experience": 11,
+    "completed_jobs": 189,
+    "response_time": "3 horas",
+    "availability": "Disponível",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/marcelo-001.jpg",
+        "description": "Reforma de instalação elétrica residencial"
+      }
+    ],
+    "specialties": ["Residencial", "Chuveiros", "Disjuntores", "Reforma elétrica"],
+    "phone": "(22) 98456-7890",
+    "whatsapp": "5522984567890",
+    "member_since": "2023-04-12"
+  },
+  {
+    "id": "prof-007",
+    "name": "Paulo Henrique Souza",
+    "category": "Encanador",
+    "location": {
+      "city": "São Pedro da Aldeia",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8431,
+        "lng": -42.1015
+      }
+    },
+    "rating": 4.9,
+    "reviews_count": 83,
+    "verified": true,
+    "badges": ["Pro Verificado", "Top Rated", "Especialista"],
+    "bio": "Encanador profissional com expertise em instalações hidráulicas, detecção de vazamentos e desentupimentos. Trabalho com equipamentos modernos e garantia de serviço.",
+    "hourly_rate": 75,
+    "daily_rate": 520,
+    "subscription_plan": "ouro",
+    "years_experience": 16,
+    "completed_jobs": 298,
+    "response_time": "1 hora",
+    "availability": "Imediata",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/paulo-001.jpg",
+        "description": "Instalação de sistema de aquecimento solar"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/paulo-002.jpg",
+        "description": "Rede hidráulica completa - casa nova"
+      },
+      {
+        "type": "video",
+        "url": "/videos/portfolio/paulo-leak.mp4",
+        "description": "Detecção de vazamento com geofone"
+      }
+    ],
+    "specialties": ["Vazamentos", "Aquecimento solar", "Esgoto", "Instalações completas"],
+    "phone": "(22) 99567-8901",
+    "whatsapp": "5522995678901",
+    "member_since": "2022-12-08"
+  },
+  {
+    "id": "prof-008",
+    "name": "Ricardo Ferraz",
+    "category": "Encanador",
+    "location": {
+      "city": "Cabo Frio",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8788,
+        "lng": -42.0194
+      }
+    },
+    "rating": 4.7,
+    "reviews_count": 59,
+    "verified": true,
+    "badges": ["Pro Verificado", "Emergência 24h"],
+    "bio": "Encanador e técnico em hidráulica. Atendimento 24h para emergências, vazamentos e entupimentos. Instalação e manutenção de caixas d'água, bombas e pressurizadores.",
+    "hourly_rate": 70,
+    "daily_rate": 490,
+    "subscription_plan": "prata",
+    "years_experience": 13,
+    "completed_jobs": 221,
+    "response_time": "2 horas",
+    "availability": "24/7",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/ricardo-001.jpg",
+        "description": "Instalação de pressurizador de água"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/ricardo-002.jpg",
+        "description": "Troca de caixa d'água 1000L"
+      }
+    ],
+    "specialties": ["Emergências", "Desentupimentos", "Bombas d'água", "Vazamentos"],
+    "phone": "(22) 98678-9012",
+    "whatsapp": "5522986789012",
+    "member_since": "2023-02-28"
+  },
+  {
+    "id": "prof-009",
+    "name": "Thiago Martins",
+    "category": "Pintor",
+    "location": {
+      "city": "Búzios",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.7469,
+        "lng": -41.8819
+      }
+    },
+    "rating": 4.9,
+    "reviews_count": 76,
+    "verified": true,
+    "badges": ["Pro Verificado", "Top Rated", "Especialista"],
+    "bio": "Pintor profissional especializado em acabamentos de alto padrão. Texturas, efeitos decorativos, pintura de fachadas e interiores. Trabalho com as melhores marcas de tinta.",
+    "hourly_rate": 65,
+    "daily_rate": 450,
+    "subscription_plan": "ouro",
+    "years_experience": 14,
+    "completed_jobs": 267,
+    "response_time": "2 horas",
+    "availability": "Disponível",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/thiago-001.jpg",
+        "description": "Pintura com efeito marmorizado"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/thiago-002.jpg",
+        "description": "Fachada residencial - textura rústica"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/thiago-003.jpg",
+        "description": "Pintura interna - cores personalizadas"
+      }
+    ],
+    "specialties": ["Alto padrão", "Texturas", "Efeitos decorativos", "Fachadas"],
+    "phone": "(22) 99789-0123",
+    "whatsapp": "5522997890123",
+    "member_since": "2023-01-08"
+  },
+  {
+    "id": "prof-010",
+    "name": "Daniel Oliveira",
+    "category": "Pintor",
+    "location": {
+      "city": "Araruama",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8719,
+        "lng": -42.3428
+      }
+    },
+    "rating": 4.5,
+    "reviews_count": 44,
+    "verified": true,
+    "badges": ["Pro Verificado"],
+    "bio": "Pintor residencial e comercial. Serviços de pintura interna e externa, reformas, repintura de grades e portões. Orçamento gratuito e trabalho caprichado.",
+    "hourly_rate": 55,
+    "daily_rate": 380,
+    "subscription_plan": "bronze",
+    "years_experience": 9,
+    "completed_jobs": 156,
+    "response_time": "5 horas",
+    "availability": "Disponível",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/daniel-001.jpg",
+        "description": "Pintura externa de casa"
+      }
+    ],
+    "specialties": ["Residencial", "Comercial", "Grades", "Portões"],
+    "phone": "(22) 98890-1234",
+    "whatsapp": "5522988901234",
+    "member_since": "2023-05-15"
+  },
+  {
+    "id": "prof-011",
+    "name": "Leonardo Cardoso",
+    "category": "Marceneiro",
+    "location": {
+      "city": "São Pedro da Aldeia",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8431,
+        "lng": -42.1015
+      }
+    },
+    "rating": 5.0,
+    "reviews_count": 68,
+    "verified": true,
+    "badges": ["Pro Verificado", "Top Rated", "5 Estrelas", "Especialista"],
+    "bio": "Marceneiro e designer de móveis sob medida. Armários planejados, closets, cozinhas e móveis corporativos. Trabalho com madeira de qualidade e acabamento impecável.",
+    "hourly_rate": 85,
+    "daily_rate": 600,
+    "subscription_plan": "ouro",
+    "years_experience": 20,
+    "completed_jobs": 189,
+    "response_time": "2 horas",
+    "availability": "Sob consulta",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/leonardo-001.jpg",
+        "description": "Cozinha planejada completa - MDF"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/leonardo-002.jpg",
+        "description": "Closet em madeira maciça"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/leonardo-003.jpg",
+        "description": "Estante home theater customizada"
+      },
+      {
+        "type": "video",
+        "url": "/videos/portfolio/leonardo-tour.mp4",
+        "description": "Tour - Projeto residencial completo"
+      }
+    ],
+    "specialties": ["Móveis planejados", "Closets", "Cozinhas", "Design personalizado"],
+    "phone": "(22) 99901-2345",
+    "whatsapp": "5522999012345",
+    "member_since": "2022-10-18"
+  },
+  {
+    "id": "prof-012",
+    "name": "Rafael Gomes",
+    "category": "Marceneiro",
+    "location": {
+      "city": "Cabo Frio",
+      "state": "RJ",
+      "region": "Região dos Lagos",
+      "coordinates": {
+        "lat": -22.8788,
+        "lng": -42.0194
+      }
+    },
+    "rating": 4.7,
+    "reviews_count": 41,
+    "verified": true,
+    "badges": ["Pro Verificado", "Confiável"],
+    "bio": "Marceneiro profissional para serviços de instalação, reparo e fabricação de móveis. Portas, janelas, armários e reparos em geral. Atendimento personalizado.",
+    "hourly_rate": 70,
+    "daily_rate": 490,
+    "subscription_plan": "prata",
+    "years_experience": 12,
+    "completed_jobs": 134,
+    "response_time": "4 horas",
+    "availability": "Disponível",
+    "portfolio": [
+      {
+        "type": "image",
+        "url": "/images/portfolio/rafael-001.jpg",
+        "description": "Instalação de portas de madeira"
+      },
+      {
+        "type": "image",
+        "url": "/images/portfolio/rafael-002.jpg",
+        "description": "Reparo de armário de cozinha"
+      }
+    ],
+    "specialties": ["Instalação", "Reparos", "Portas", "Janelas"],
+    "phone": "(22) 98012-3456",
+    "whatsapp": "5522980123456",
+    "member_since": "2023-03-25"
+  }
+]

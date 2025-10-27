@@ -1,0 +1,416 @@
+[
+  {
+    "id": "cat-001",
+    "name": "Alvenaria",
+    "slug": "alvenaria",
+    "icon": "brick-wall",
+    "description": "Construção, reformas e reparos em alvenaria estrutural",
+    "average_price_range": {
+      "min": 300,
+      "max": 800,
+      "unit": "diária"
+    },
+    "subcategories": [
+      {
+        "id": "sub-001",
+        "name": "Construção de Muros",
+        "description": "Muros de alvenaria, blocos e tijolos",
+        "typical_duration": "3-7 dias",
+        "price_range": { "min": 400, "max": 700 }
+      },
+      {
+        "id": "sub-002",
+        "name": "Fundações",
+        "description": "Fundações rasas e profundas, sapatas, radier",
+        "typical_duration": "5-10 dias",
+        "price_range": { "min": 500, "max": 800 }
+      },
+      {
+        "id": "sub-003",
+        "name": "Lajes",
+        "description": "Lajes pré-moldadas, maciças e nervuradas",
+        "typical_duration": "3-5 dias",
+        "price_range": { "min": 450, "max": 750 }
+      },
+      {
+        "id": "sub-004",
+        "name": "Revestimentos",
+        "description": "Reboco, emboço, chapisco e revestimentos cerâmicos",
+        "typical_duration": "4-8 dias",
+        "price_range": { "min": 350, "max": 600 }
+      },
+      {
+        "id": "sub-005",
+        "name": "Reformas Estruturais",
+        "description": "Abertura de vãos, reforços estruturais",
+        "typical_duration": "5-15 dias",
+        "price_range": { "min": 600, "max": 1200 }
+      }
+    ],
+    "popular": true
+  },
+  {
+    "id": "cat-002",
+    "name": "Elétrica",
+    "slug": "eletrica",
+    "icon": "lightning-bolt",
+    "description": "Instalações elétricas residenciais, comerciais e industriais",
+    "average_price_range": {
+      "min": 400,
+      "max": 900,
+      "unit": "diária"
+    },
+    "subcategories": [
+      {
+        "id": "sub-006",
+        "name": "Instalações Residenciais",
+        "description": "Instalação completa de sistemas elétricos residenciais",
+        "typical_duration": "3-7 dias",
+        "price_range": { "min": 400, "max": 650 }
+      },
+      {
+        "id": "sub-007",
+        "name": "Quadros Elétricos",
+        "description": "Montagem e manutenção de quadros de distribuição",
+        "typical_duration": "1-2 dias",
+        "price_range": { "min": 500, "max": 800 }
+      },
+      {
+        "id": "sub-008",
+        "name": "Energia Solar",
+        "description": "Instalação de sistemas fotovoltaicos",
+        "typical_duration": "2-5 dias",
+        "price_range": { "min": 600, "max": 1000 }
+      },
+      {
+        "id": "sub-009",
+        "name": "Automação Residencial",
+        "description": "Sistemas inteligentes para casa",
+        "typical_duration": "3-7 dias",
+        "price_range": { "min": 700, "max": 1500 }
+      },
+      {
+        "id": "sub-010",
+        "name": "Manutenção Elétrica",
+        "description": "Reparos, troca de fiação, instalação de tomadas",
+        "typical_duration": "Algumas horas",
+        "price_range": { "min": 150, "max": 400 }
+      },
+      {
+        "id": "sub-011",
+        "name": "Emergências 24h",
+        "description": "Atendimento urgente para problemas elétricos",
+        "typical_duration": "Imediato",
+        "price_range": { "min": 200, "max": 500 }
+      }
+    ],
+    "popular": true
+  },
+  {
+    "id": "cat-003",
+    "name": "Hidráulica",
+    "slug": "hidraulica",
+    "icon": "water-drop",
+    "description": "Serviços de encanamento, instalações hidráulicas e sanitárias",
+    "average_price_range": {
+      "min": 350,
+      "max": 850,
+      "unit": "diária"
+    },
+    "subcategories": [
+      {
+        "id": "sub-012",
+        "name": "Instalações Hidráulicas",
+        "description": "Rede de água fria e quente",
+        "typical_duration": "3-7 dias",
+        "price_range": { "min": 400, "max": 700 }
+      },
+      {
+        "id": "sub-013",
+        "name": "Detecção de Vazamentos",
+        "description": "Localização precisa de vazamentos ocultos",
+        "typical_duration": "Meio dia",
+        "price_range": { "min": 250, "max": 500 }
+      },
+      {
+        "id": "sub-014",
+        "name": "Desentupimentos",
+        "description": "Esgoto, pias, ralos e vasos sanitários",
+        "typical_duration": "Algumas horas",
+        "price_range": { "min": 150, "max": 400 }
+      },
+      {
+        "id": "sub-015",
+        "name": "Aquecimento Solar",
+        "description": "Sistemas de aquecimento de água",
+        "typical_duration": "2-4 dias",
+        "price_range": { "min": 500, "max": 1000 }
+      },
+      {
+        "id": "sub-016",
+        "name": "Caixas d'Água e Bombas",
+        "description": "Instalação e manutenção",
+        "typical_duration": "1 dia",
+        "price_range": { "min": 300, "max": 600 }
+      },
+      {
+        "id": "sub-017",
+        "name": "Emergências 24h",
+        "description": "Vazamentos e entupimentos urgentes",
+        "typical_duration": "Imediato",
+        "price_range": { "min": 200, "max": 600 }
+      }
+    ],
+    "popular": true
+  },
+  {
+    "id": "cat-004",
+    "name": "Pintura",
+    "slug": "pintura",
+    "icon": "paint-brush",
+    "description": "Pintura residencial, comercial e decorativa",
+    "average_price_range": {
+      "min": 300,
+      "max": 700,
+      "unit": "diária"
+    },
+    "subcategories": [
+      {
+        "id": "sub-018",
+        "name": "Pintura Interna",
+        "description": "Ambientes internos, paredes e tetos",
+        "typical_duration": "2-5 dias",
+        "price_range": { "min": 300, "max": 500 }
+      },
+      {
+        "id": "sub-019",
+        "name": "Pintura Externa",
+        "description": "Fachadas e áreas externas",
+        "typical_duration": "3-7 dias",
+        "price_range": { "min": 350, "max": 600 }
+      },
+      {
+        "id": "sub-020",
+        "name": "Texturas Decorativas",
+        "description": "Grafiato, textura rústica, efeitos especiais",
+        "typical_duration": "2-4 dias",
+        "price_range": { "min": 400, "max": 700 }
+      },
+      {
+        "id": "sub-021",
+        "name": "Pintura de Grades e Portões",
+        "description": "Tratamento e pintura de superfícies metálicas",
+        "typical_duration": "1-2 dias",
+        "price_range": { "min": 250, "max": 500 }
+      },
+      {
+        "id": "sub-022",
+        "name": "Alto Padrão",
+        "description": "Acabamentos especiais e efeitos decorativos",
+        "typical_duration": "5-10 dias",
+        "price_range": { "min": 500, "max": 1000 }
+      }
+    ],
+    "popular": true
+  },
+  {
+    "id": "cat-005",
+    "name": "Marcenaria",
+    "slug": "marcenaria",
+    "icon": "hammer",
+    "description": "Móveis planejados, instalações e reparos em madeira",
+    "average_price_range": {
+      "min": 400,
+      "max": 1000,
+      "unit": "diária"
+    },
+    "subcategories": [
+      {
+        "id": "sub-023",
+        "name": "Móveis Planejados",
+        "description": "Armários, cozinhas e closets sob medida",
+        "typical_duration": "10-20 dias",
+        "price_range": { "min": 600, "max": 1200 }
+      },
+      {
+        "id": "sub-024",
+        "name": "Instalação de Portas",
+        "description": "Portas internas, externas e de correr",
+        "typical_duration": "1-2 dias",
+        "price_range": { "min": 350, "max": 600 }
+      },
+      {
+        "id": "sub-025",
+        "name": "Instalação de Janelas",
+        "description": "Janelas de madeira e esquadrias",
+        "typical_duration": "1-2 dias",
+        "price_range": { "min": 300, "max": 550 }
+      },
+      {
+        "id": "sub-026",
+        "name": "Reparos em Móveis",
+        "description": "Consertos e restauração",
+        "typical_duration": "Algumas horas",
+        "price_range": { "min": 150, "max": 400 }
+      },
+      {
+        "id": "sub-027",
+        "name": "Deck e Pergolados",
+        "description": "Estruturas de madeira para áreas externas",
+        "typical_duration": "5-10 dias",
+        "price_range": { "min": 500, "max": 900 }
+      }
+    ],
+    "popular": false
+  },
+  {
+    "id": "cat-006",
+    "name": "Reparos Gerais",
+    "slug": "reparos-gerais",
+    "icon": "wrench",
+    "description": "Pequenos consertos e manutenções diversas",
+    "average_price_range": {
+      "min": 150,
+      "max": 400,
+      "unit": "serviço"
+    },
+    "subcategories": [
+      {
+        "id": "sub-028",
+        "name": "Reparos Hidráulicos",
+        "description": "Torneiras, registros, válvulas",
+        "typical_duration": "Algumas horas",
+        "price_range": { "min": 100, "max": 300 }
+      },
+      {
+        "id": "sub-029",
+        "name": "Reparos Elétricos",
+        "description": "Tomadas, interruptores, luminárias",
+        "typical_duration": "Algumas horas",
+        "price_range": { "min": 100, "max": 300 }
+      },
+      {
+        "id": "sub-030",
+        "name": "Instalação de Acessórios",
+        "description": "Suportes, prateleiras, cortinas, varais",
+        "typical_duration": "Algumas horas",
+        "price_range": { "min": 80, "max": 200 }
+      },
+      {
+        "id": "sub-031",
+        "name": "Troca de Fechaduras",
+        "description": "Fechaduras, maçanetas e trancas",
+        "typical_duration": "1-2 horas",
+        "price_range": { "min": 100, "max": 250 }
+      },
+      {
+        "id": "sub-032",
+        "name": "Consertos Diversos",
+        "description": "Reparos gerais em casa",
+        "typical_duration": "Algumas horas",
+        "price_range": { "min": 120, "max": 350 }
+      }
+    ],
+    "popular": true
+  },
+  {
+    "id": "cat-007",
+    "name": "Reformas",
+    "slug": "reformas",
+    "icon": "home-repair",
+    "description": "Reformas completas e parciais",
+    "average_price_range": {
+      "min": 500,
+      "max": 1500,
+      "unit": "diária"
+    },
+    "subcategories": [
+      {
+        "id": "sub-033",
+        "name": "Reforma Completa",
+        "description": "Reformas totais de imóveis",
+        "typical_duration": "30-90 dias",
+        "price_range": { "min": 20000, "max": 100000 }
+      },
+      {
+        "id": "sub-034",
+        "name": "Reforma de Banheiro",
+        "description": "Modernização completa de banheiros",
+        "typical_duration": "7-15 dias",
+        "price_range": { "min": 5000, "max": 15000 }
+      },
+      {
+        "id": "sub-035",
+        "name": "Reforma de Cozinha",
+        "description": "Modernização completa de cozinhas",
+        "typical_duration": "10-20 dias",
+        "price_range": { "min": 8000, "max": 25000 }
+      },
+      {
+        "id": "sub-036",
+        "name": "Reforma de Fachada",
+        "description": "Revitalização de fachadas",
+        "typical_duration": "7-15 dias",
+        "price_range": { "min": 4000, "max": 12000 }
+      },
+      {
+        "id": "sub-037",
+        "name": "Ampliações",
+        "description": "Construção de novos cômodos",
+        "typical_duration": "20-60 dias",
+        "price_range": { "min": 15000, "max": 50000 }
+      }
+    ],
+    "popular": true
+  },
+  {
+    "id": "cat-008",
+    "name": "Emergências",
+    "slug": "emergencias",
+    "icon": "alert-circle",
+    "description": "Atendimento urgente 24h",
+    "average_price_range": {
+      "min": 200,
+      "max": 600,
+      "unit": "chamada"
+    },
+    "subcategories": [
+      {
+        "id": "sub-038",
+        "name": "Vazamento de Água",
+        "description": "Atendimento imediato para vazamentos",
+        "typical_duration": "Imediato",
+        "price_range": { "min": 200, "max": 500 }
+      },
+      {
+        "id": "sub-039",
+        "name": "Problema Elétrico",
+        "description": "Curto-circuito, falta de energia",
+        "typical_duration": "Imediato",
+        "price_range": { "min": 200, "max": 500 }
+      },
+      {
+        "id": "sub-040",
+        "name": "Entupimento Grave",
+        "description": "Esgoto entupido ou retornando",
+        "typical_duration": "Imediato",
+        "price_range": { "min": 250, "max": 600 }
+      },
+      {
+        "id": "sub-041",
+        "name": "Infiltração Urgente",
+        "description": "Goteiras e infiltrações graves",
+        "typical_duration": "Imediato",
+        "price_range": { "min": 300, "max": 700 }
+      },
+      {
+        "id": "sub-042",
+        "name": "Porta/Fechadura Travada",
+        "description": "Destravamento de portas e fechaduras",
+        "typical_duration": "Imediato",
+        "price_range": { "min": 150, "max": 400 }
+      }
+    ],
+    "popular": true
+  }
+]
