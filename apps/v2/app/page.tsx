@@ -119,8 +119,8 @@ export default function HomePage() {
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary-50 via-primary-50 to-accent-50">
-        {/* Background Image - Construção Civil */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541976076855-3c00b0e1e01e?w=1600')] bg-cover bg-center opacity-20" />
+        {/* Background Image - Grupo de pessoas em construção */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600')] bg-cover bg-center opacity-15" style={{ zIndex: 0 }} />
 
         <motion.div
           className="absolute inset-0 bg-gradient-vibrant opacity-10"
