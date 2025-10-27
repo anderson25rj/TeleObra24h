@@ -119,6 +119,9 @@ export default function HomePage() {
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary-50 via-primary-50 to-accent-50">
+        {/* Background Image - Construção Civil */}
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-NXI8foTNMc0?w=1600')] bg-cover bg-center opacity-20" />
+
         <motion.div
           className="absolute inset-0 bg-gradient-vibrant opacity-10"
           style={{ y }}
