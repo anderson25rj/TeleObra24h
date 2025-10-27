@@ -2,7 +2,7 @@
 
 import type { Metadata } from 'next';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
-import { ArrowRight, Users, Briefcase, Star, MapPin, Play, TrendingUp, Award, Clock, Sparkles } from 'lucide-react';
+import { ArrowRight, Users, Briefcase, Star, MapPin, Play, TrendingUp, Award, Clock, Sparkles, Wrench } from 'lucide-react';
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ThemeToggle } from '@teleobra24h/ui';
@@ -124,7 +124,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-vibrant rounded-xl flex items-center justify-center shadow-lg">
-                <Sparkles className="w-6 h-6 text-white" />
+                <Wrench className="w-6 h-6 text-white" />
               </div>
               <span className="font-heading text-2xl font-black bg-gradient-vibrant bg-clip-text text-transparent">
                 TeleObra24h

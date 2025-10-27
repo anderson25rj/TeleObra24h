@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button, ThemeToggle } from '@teleobra24h/ui';
-import { Menu, Phone, User } from 'lucide-react';
+import { Menu, Phone, User, HardHat } from 'lucide-react';
 import { useState } from 'react';
 
 export function Header() {
@@ -15,7 +15,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-br from-primary-600 to-secondary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">T</span>
+              <HardHat className="text-white w-6 h-6" />
             </div>
             <span className="text-2xl font-heading font-bold text-primary-600">
               TeleObra<span className="text-secondary-500">24h</span>

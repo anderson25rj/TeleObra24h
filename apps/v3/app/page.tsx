@@ -15,7 +15,8 @@ import {
   Award,
   Sparkles,
   MapPin,
-  Zap
+  Zap,
+  Hammer
 } from 'lucide-react';
 import { ThemeToggle } from '@teleobra24h/ui';
 
@@ -44,7 +45,7 @@ export default function HomePage() {
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-secondary rounded-lg flex items-center justify-center">
-                <Sparkles className="w-6 h-6 text-white" />
+                <Hammer className="w-6 h-6 text-white" />
               </div>
               <span className="font-heading text-2xl font-bold bg-gradient-to-r from-primary-900 to-secondary-600 bg-clip-text text-transparent">
                 TeleObra24h

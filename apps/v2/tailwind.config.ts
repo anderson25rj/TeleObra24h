@@ -5,6 +5,7 @@ import type { Config } from 'tailwindcss';
  * Gradient colors: Purple/Orange (#667eea, #764ba2, #F97316)
  */
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',

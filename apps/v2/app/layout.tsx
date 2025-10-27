@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 import './globals.css';
 import { OrganizationSchema, LocalBusinessSchema, WebSiteSchema } from '@/components/StructuredData';
+import { MarcioDemoWidget } from '@teleobra24h/ui';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -135,7 +136,15 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>{children}</body>
+      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>
+        {children}
+        <MarcioDemoWidget
+          primaryColor="#764ba2"
+          accentColor="#F97316"
+          greeting="E aí! 👋 Márcio aqui! Em breve vou te ajudar a encontrar o profissional perfeito. Aguarde as novidades! ⚡"
+          version="v2"
+        />
+      </body>
     </html>
   );
 }

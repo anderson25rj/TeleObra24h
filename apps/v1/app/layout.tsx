@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter, Poppins } from 'next/font/google';
 import './globals.css';
 import { OrganizationSchema, LocalBusinessSchema, WebSiteSchema } from '@/components/StructuredData';
+import { MarcioDemoWidget } from '@teleobra24h/ui';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -143,7 +144,15 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>{children}</body>
+      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>
+        {children}
+        <MarcioDemoWidget
+          primaryColor="#1E40AF"
+          accentColor="#F59E0B"
+          greeting="Olá! Sou o Márcio, seu consultor virtual. Em breve estarei aqui para ajudá-lo a encontrar os melhores profissionais da Região dos Lagos - RJ!"
+          version="v1"
+        />
+      </body>
     </html>
   );
 }
