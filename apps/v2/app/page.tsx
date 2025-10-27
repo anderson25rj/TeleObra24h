@@ -25,7 +25,7 @@ const testimonials = [
     photo: 'https://i.pravatar.cc/150?img=1',
     quote: 'Serviço excepcional! Encontrei um eletricista em minutos e o problema foi resolvido no mesmo dia.',
     rating: 5,
-    videoThumb: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400'
+    videoThumb: 'https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?w=400&h=300'
   },
   {
     id: '2',
@@ -35,7 +35,7 @@ const testimonials = [
     photo: 'https://i.pravatar.cc/150?img=12',
     quote: 'A plataforma triplicou meus clientes! O melhor investimento que já fiz na minha carreira.',
     rating: 5,
-    videoThumb: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400'
+    videoThumb: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300'
   },
   {
     id: '3',
@@ -45,7 +45,7 @@ const testimonials = [
     photo: 'https://i.pravatar.cc/150?img=5',
     quote: 'Confiança total! Todos os profissionais são verificados e super competentes.',
     rating: 5,
-    videoThumb: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400'
+    videoThumb: 'https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?w=400&h=300'
   }
 ];
 
@@ -54,7 +54,7 @@ const blogPosts = [
     id: '1',
     title: '5 Dicas para Escolher o Profissional Ideal',
     excerpt: 'Aprenda a avaliar portfólio, reviews e certificações antes de contratar.',
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600',
+    image: 'https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?w=600&h=400',
     date: '15 Out 2025',
     category: 'Guias'
   },
@@ -62,7 +62,7 @@ const blogPosts = [
     id: '2',
     title: 'Manutenção Preventiva: Vale a Pena?',
     excerpt: 'Descubra como economizar evitando problemas antes que aconteçam.',
-    image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600',
+    image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=600&h=400',
     date: '12 Out 2025',
     category: 'Dicas'
   },
@@ -70,7 +70,7 @@ const blogPosts = [
     id: '3',
     title: 'Como Aumentar sua Renda como Profissional',
     excerpt: 'Estratégias comprovadas para profissionais que querem crescer na plataforma.',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600',
+    image: 'https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?w=600&h=400',
     date: '10 Out 2025',
     category: 'Profissionais'
   }
@@ -436,10 +436,10 @@ export default function HomePage() {
                     </ul>
                   </div>
                   <div className="flex items-center justify-center">
-                    <div className="relative w-full h-64 bg-gradient-primary rounded-2xl flex items-center justify-center">
+                    <div className="relative w-full h-64 bg-gradient-primary rounded-2xl flex items-center justify-center overflow-hidden">
                       <img
-                        src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=300&fit=crop"
-                        alt="Cliente feliz"
+                        src="https://images.unsplash.com/photo-1590247813693-5541d1c609fd?w=400&h=300&fit=crop"
+                        alt="Cliente feliz com profissional"
                         className="w-full h-full object-cover rounded-2xl opacity-80"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent rounded-2xl" />
@@ -485,10 +485,10 @@ export default function HomePage() {
                     </ul>
                   </div>
                   <div className="flex items-center justify-center">
-                    <div className="relative w-full h-64 bg-gradient-accent rounded-2xl flex items-center justify-center">
+                    <div className="relative w-full h-64 bg-gradient-accent rounded-2xl flex items-center justify-center overflow-hidden">
                       <img
-                        src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop"
-                        alt="Profissional trabalhando"
+                        src="https://images.pexels.com/photos/159358/construction-site-build-construction-work-159358.jpeg?w=400&h=300&fit=crop"
+                        alt="Profissional trabalhando na construção"
                         className="w-full h-full object-cover rounded-2xl opacity-80"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-accent-900/80 to-transparent rounded-2xl" />
