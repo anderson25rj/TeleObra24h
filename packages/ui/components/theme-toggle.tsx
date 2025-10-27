@@ -21,9 +21,15 @@ export function ThemeToggle() {
 
     if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.toggle('dark', systemTheme === 'dark');
+      if (systemTheme === 'dark') {
+        root.classList.add('dark');
+      } else {
+        root.classList.remove('dark');
+      }
+    } else if (newTheme === 'dark') {
+      root.classList.add('dark');
     } else {
-      root.classList.toggle('dark', newTheme === 'dark');
+      root.classList.remove('dark');
     }
   };
 

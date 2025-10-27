@@ -121,8 +121,29 @@ export default function RootLayout({
         <OrganizationSchema />
         <LocalBusinessSchema />
         <WebSiteSchema />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const theme = localStorage.getItem('theme') || 'system';
+                  const root = document.documentElement;
+
+                  if (theme === 'system') {
+                    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                    if (systemTheme === 'dark') {
+                      root.classList.add('dark');
+                    }
+                  } else if (theme === 'dark') {
+                    root.classList.add('dark');
+                  }
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300`}>{children}</body>
     </html>
   );
 }
