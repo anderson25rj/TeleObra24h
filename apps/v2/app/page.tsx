@@ -193,7 +193,7 @@ export default function HomePage() {
                 </span>
               </motion.div>
 
-              <h1 className="text-5xl md:text-7xl font-heading font-black mb-6 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-heading font-black mb-6 leading-tight text-gray-900 dark:text-white">
                 <span className="gradient-text">Conectamos</span>
                 <br />
                 Você ao Profissional
