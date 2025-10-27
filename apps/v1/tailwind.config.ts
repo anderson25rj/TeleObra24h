@@ -5,6 +5,7 @@ import type { Config } from 'tailwindcss';
  * Primary colors: Blue, Green with Orange accent
  */
 const config: Config = {
+  darkMode: 'class',
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',

@@ -102,3 +102,4 @@ export {
   CommandSeparator,
 } from "./components/command";
 export { ScrollArea, ScrollBar } from "./components/scroll-area";
+export { ThemeToggle } from "./components/theme-toggle";
