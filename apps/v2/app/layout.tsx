@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: '%s | TeleObra24h',
   },
   description:
-    'Plataforma moderna para encontrar profissionais da construção civil na Região dos Lagos. Pedreiros, eletricistas, encanadores, pintores e marceneiros verificados. Compare avaliações e escolha o melhor.',
+    'Plataforma moderna para encontrar profissionais da construção civil na Região dos Lagos - RJ. Pedreiros, eletricistas, encanadores, pintores e marceneiros verificados. Compare avaliações e escolha o melhor.',
   keywords: [
     'construção civil',
     'profissionais construção',
@@ -96,7 +96,7 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'BR-RJ',
-    'geo.placename': 'Região dos Lagos',
+    'geo.placename': 'Região dos Lagos - RJ',
     'geo.position': '-22.8431;-42.1015',
     'ICBM': '-22.8431, -42.1015',
   },

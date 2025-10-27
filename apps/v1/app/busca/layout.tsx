@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Buscar Profissionais da Construção Civil | TeleObra24h',
     description:
-      'Compare e escolha entre centenas de profissionais qualificados na Região dos Lagos. Avaliações reais e profissionais verificados.',
+      'Compare e escolha entre centenas de profissionais qualificados na Região dos Lagos - RJ. Avaliações reais e profissionais verificados.',
     url: 'https://teleobra24h.com.br/busca',
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Buscar Profissionais da Construção Civil',
     description:
-      'Compare e escolha entre centenas de profissionais qualificados na Região dos Lagos.',
+      'Compare e escolha entre centenas de profissionais qualificados na Região dos Lagos - RJ.',
     images: ['https://teleobra24h.com.br/og-image-busca-v1.jpg'],
   },
   alternates: {

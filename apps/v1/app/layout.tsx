@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: 'TeleObra24h - Encontre Profissionais da Construção Civil na Região dos Lagos',
+    default: 'TeleObra24h - Encontre Profissionais da Construção Civil na Região dos Lagos - RJ',
     template: '%s | TeleObra24h',
   },
   description:
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'pt_BR',
     url: 'https://teleobra24h.com.br',
-    title: 'TeleObra24h - Profissionais da Construção Civil na Região dos Lagos',
+    title: 'TeleObra24h - Profissionais da Construção Civil na Região dos Lagos - RJ',
     description:
-      'Conecte-se com os melhores profissionais da construção civil na Região dos Lagos. Avaliações reais, profissionais verificados e atendimento rápido.',
+      'Conecte-se com os melhores profissionais da construção civil na Região dos Lagos - RJ. Avaliações reais, profissionais verificados e atendimento rápido.',
     siteName: 'TeleObra24h',
     images: [
       {

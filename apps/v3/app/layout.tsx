@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     url: 'https://teleobra24h.com.br',
     title: 'TeleObra24h Premium - Profissionais de Elite da Construção',
     description:
-      'Acesso exclusivo aos melhores profissionais da construção civil na Região dos Lagos. Qualidade superior, garantia estendida e atendimento VIP personalizado.',
+      'Acesso exclusivo aos melhores profissionais da construção civil na Região dos Lagos - RJ. Qualidade superior, garantia estendida e atendimento VIP personalizado.',
     siteName: 'TeleObra24h Premium',
     images: [
       {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'TeleObra24h Premium - Profissionais de Elite',
     description:
-      'Marketplace premium de profissionais de elite da construção civil. Qualidade superior e atendimento VIP na Região dos Lagos.',
+      'Marketplace premium de profissionais de elite da construção civil. Qualidade superior e atendimento VIP na Região dos Lagos - RJ.',
     images: ['https://teleobra24h.com.br/og-image-v3-premium.jpg'],
     creator: '@teleobra24h',
     site: '@teleobra24h',
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'BR-RJ',
-    'geo.placename': 'Região dos Lagos',
+    'geo.placename': 'Região dos Lagos - RJ',
     'geo.position': '-22.8431;-42.1015',
     'ICBM': '-22.8431, -42.1015',
   },

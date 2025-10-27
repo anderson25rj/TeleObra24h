@@ -41,7 +41,7 @@ const values = [
   {
     icon: Users,
     title: 'Comunidade',
-    description: 'Construímos uma rede forte de profissionais e clientes satisfeitos na Região dos Lagos • em breve em todo Brasil.',
+    description: 'Construímos uma rede forte de profissionais e clientes satisfeitos na Região dos Lagos - RJ • em breve em todo Brasil.',
     color: 'from-green-500 to-emerald-500'
   }
 ];
@@ -55,7 +55,7 @@ const timeline = [
   {
     year: '2024',
     title: 'Expansão Regional',
-    description: 'Expandimos para todas as 7 cidades da Região dos Lagos • em breve em todo Brasil, alcançando mais de 1.000 profissionais.'
+    description: 'Expandimos para todas as 7 cidades da Região dos Lagos - RJ • em breve em todo Brasil, alcançando mais de 1.000 profissionais.'
   },
   {
     year: '2025',
@@ -134,7 +134,7 @@ export default function SobrePage() {
             transition={{ delay: 0.3 }}
             className="text-5xl md:text-7xl font-heading font-black mb-6"
           >
-            Transformando a Região dos Lagos <span className="text-3xl md:text-4xl font-normal text-gray-500">• em breve em todo Brasil</span>
+            Transformando a Região dos Lagos - RJ <span className="text-3xl md:text-4xl font-normal text-gray-500">• em breve em todo Brasil</span>
           </motion.h1>
 
           <motion.p
@@ -198,7 +198,7 @@ export default function SobrePage() {
             <p className="text-xl text-gray-600 leading-relaxed">
               Nascemos da necessidade de criar uma ponte confiável entre profissionais talentosos
               e clientes que buscam qualidade. Em poucos anos, nos tornamos a principal plataforma
-              da Região dos Lagos <span className="text-sm text-gray-500">• em breve em todo Brasil</span>, transformando vidas e negócios.
+              da Região dos Lagos - RJ <span className="text-sm text-gray-500">• em breve em todo Brasil</span>, transformando vidas e negócios.
             </p>
           </motion.div>
 

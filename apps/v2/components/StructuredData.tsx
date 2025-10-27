@@ -77,7 +77,7 @@ export function LocalBusinessSchema({
   name = 'TeleObra24h',
   description = 'Marketplace de profissionais da construção civil',
   address = {
-    streetAddress: 'Região dos Lagos',
+    streetAddress: 'Região dos Lagos - RJ',
     addressLocality: 'São Pedro da Aldeia',
     addressRegion: 'RJ',
     postalCode: '28940-000',

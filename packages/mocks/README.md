@@ -15,7 +15,7 @@ npm install @teleobra24h/mocks
 ## Data Files
 
 ### professionals.json
-12 mock construction professionals from Região dos Lagos (RJ):
+12 mock construction professionals from Região dos Lagos - RJ (RJ):
 - 3 Pedreiros (Masons)
 - 3 Eletricistas (Electricians)
 - 2 Encanadores (Plumbers)
@@ -69,7 +69,7 @@ Each includes:
 ### stats.json
 Comprehensive platform statistics:
 - Platform overview (1,247 professionals, 8,934 completed services)
-- Region-specific data (Região dos Lagos)
+- Region-specific data (Região dos Lagos - RJ)
 - Category breakdown
 - Satisfaction metrics (96.8% client satisfaction)
 - Response times
@@ -207,7 +207,7 @@ if (isProfessional(someObject)) {
 
 ## Cities Covered
 
-All professionals are from Região dos Lagos, RJ:
+All professionals are from Região dos Lagos - RJ, RJ:
 - São Pedro da Aldeia
 - Cabo Frio
 - Búzios

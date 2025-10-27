@@ -17,7 +17,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400 mb-4">
-              Conectando você aos melhores profissionais da construção civil na Região dos Lagos.
+              Conectando você aos melhores profissionais da construção civil na Região dos Lagos - RJ.
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors">

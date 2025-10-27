@@ -47,14 +47,14 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600')] bg-cover bg-center opacity-10" />
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1600')] bg-cover bg-center opacity-10" />
         <div className="container mx-auto px-4 py-20 md:py-28 relative z-10">
           <motion.div {...fadeIn} className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
               Profissionais de Confiança para Sua Obra
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-100">
-              Conectamos você aos melhores profissionais da construção civil na Região dos Lagos <span className="text-sm font-normal opacity-80">• em breve em todo Brasil</span>
+              Conectamos você aos melhores profissionais da construção civil na Região dos Lagos - RJ <span className="text-sm font-normal opacity-80">• em breve em todo Brasil</span>
             </p>
 
             {/* Search Bar */}

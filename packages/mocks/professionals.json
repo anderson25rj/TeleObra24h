@@ -6,7 +6,7 @@
     "location": {
       "city": "São Pedro da Aldeia",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8431,
         "lng": -42.1015
@@ -53,7 +53,7 @@
     "location": {
       "city": "Cabo Frio",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8788,
         "lng": -42.0194
@@ -95,7 +95,7 @@
     "location": {
       "city": "Búzios",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.7469,
         "lng": -41.8819
@@ -137,7 +137,7 @@
     "location": {
       "city": "São Pedro da Aldeia",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8431,
         "lng": -42.1015
@@ -185,7 +185,7 @@
     "location": {
       "city": "Cabo Frio",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8788,
         "lng": -42.0194
@@ -227,7 +227,7 @@
     "location": {
       "city": "Araruama",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8719,
         "lng": -42.3428
@@ -264,7 +264,7 @@
     "location": {
       "city": "São Pedro da Aldeia",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8431,
         "lng": -42.1015
@@ -311,7 +311,7 @@
     "location": {
       "city": "Cabo Frio",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8788,
         "lng": -42.0194
@@ -353,7 +353,7 @@
     "location": {
       "city": "Búzios",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.7469,
         "lng": -41.8819
@@ -400,7 +400,7 @@
     "location": {
       "city": "Araruama",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8719,
         "lng": -42.3428
@@ -437,7 +437,7 @@
     "location": {
       "city": "São Pedro da Aldeia",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8431,
         "lng": -42.1015
@@ -489,7 +489,7 @@
     "location": {
       "city": "Cabo Frio",
       "state": "RJ",
-      "region": "Região dos Lagos",
+      "region": "Região dos Lagos - RJ",
       "coordinates": {
         "lat": -22.8788,
         "lng": -42.0194

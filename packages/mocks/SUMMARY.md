@@ -22,7 +22,7 @@ Comprehensive mock data package for the TeleObra24h construction marketplace pla
   - Encanador: 2
   - Pintor: 2
   - Marceneiro: 2
-- **Locations**: 4 cities in Região dos Lagos, RJ
+- **Locations**: 4 cities in Região dos Lagos - RJ, RJ
   - São Pedro da Aldeia
   - Cabo Frio
   - Búzios
@@ -198,7 +198,7 @@ import type { Professional, Review } from '@teleobra24h/mocks/types';
 
 ## 📍 Geographic Coverage
 
-**Primary Region**: Região dos Lagos, Rio de Janeiro
+**Primary Region**: Região dos Lagos - RJ, Rio de Janeiro
 
 | City | Professionals | Coordinates |
 |------|--------------|-------------|
@@ -312,7 +312,7 @@ All data structures are designed to work seamlessly with modern React frameworks
 All 12 professionals include:
 - Real Brazilian phone format: `(22) 9XXXX-XXXX`
 - WhatsApp links: `5522XXXXXXXXX`
-- Located in Região dos Lagos (DDD 22)
+- Located in Região dos Lagos - RJ (DDD 22)
 
 ---
 
