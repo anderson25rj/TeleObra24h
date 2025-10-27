@@ -266,7 +266,7 @@ export default function HomePage() {
               </p>
               <div>
                 <p className="font-medium">Maria Clara Santos</p>
-                <p className="text-black/50 text-sm">São Pedro da Aldeia, RJ</p>
+                <p className="text-black/50 text-sm">São Pedro da Aldeia, RJ <span className="text-xs">• em breve em todo Brasil</span></p>
               </div>
             </div>
 

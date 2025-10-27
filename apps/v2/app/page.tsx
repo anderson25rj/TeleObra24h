@@ -140,7 +140,7 @@ export default function HomePage() {
                 className="inline-block mb-6"
               >
                 <span className="px-4 py-2 bg-gradient-vibrant text-white rounded-full text-sm font-semibold shadow-lg">
-                  24/7 Disponível na Região dos Lagos
+                  24/7 Disponível na Região dos Lagos <span className="text-xs opacity-75">• em breve em todo Brasil</span>
                 </span>
               </motion.div>
 
@@ -540,7 +540,7 @@ export default function HomePage() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-heading font-black mb-4">
-              Cobrimos Toda a <span className="gradient-text">Região dos Lagos</span>
+              Cobrimos Toda a <span className="gradient-text">Região dos Lagos</span> <span className="text-lg font-normal text-gray-500">• em breve em todo Brasil</span>
             </h2>
             <p className="text-xl text-gray-600">
               Profissionais qualificados em 7 cidades
@@ -553,7 +553,7 @@ export default function HomePage() {
               <div className="relative h-96 bg-white/50 backdrop-blur-sm rounded-2xl flex items-center justify-center">
                 <div className="text-center">
                   <MapPin size={64} className="text-primary-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">Região dos Lagos</h3>
+                  <h3 className="text-2xl font-bold mb-2">Região dos Lagos <span className="text-sm font-normal text-gray-500">• em breve em todo Brasil</span></h3>
                   <p className="text-gray-600">Mapa interativo em desenvolvimento</p>
                 </div>
 
@@ -692,7 +692,7 @@ export default function HomePage() {
                 TeleObra24h
               </h3>
               <p className="text-white/70">
-                Conectando você aos melhores profissionais da Região dos Lagos.
+                Conectando você aos melhores profissionais da Região dos Lagos <span className="text-xs opacity-60">• em breve em todo Brasil</span>.
               </p>
             </div>
             <div>

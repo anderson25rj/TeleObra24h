@@ -54,7 +54,7 @@ export default function HomePage() {
               Profissionais de Confiança para Sua Obra
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-100">
-              Conectamos você aos melhores profissionais da construção civil na Região dos Lagos
+              Conectamos você aos melhores profissionais da construção civil na Região dos Lagos <span className="text-sm font-normal opacity-80">• em breve em todo Brasil</span>
             </p>
 
             {/* Search Bar */}
